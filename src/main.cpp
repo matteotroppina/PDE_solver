@@ -22,9 +22,7 @@ public:
 
   // method .getNode(x,y)
   // return the a pointer to the (x,y) node
-  Node Mesh::getNode(const size_t x, const size_t y) {
-    return (*nodes).at(x).at(y);
-  };
+  Node &getNode(const size_t x, const size_t y) { return nodes->at(x).at(y); }
 };
 
 int main() {
@@ -40,6 +38,9 @@ int main() {
   std::cin >> width;
 
   Mesh myMesh(width, height);
+  auto &node = myMesh.getNode(1, 1);
+  node.temperature = 3;
+  std::cout << node.temperature;
 
   return 0;
 }
