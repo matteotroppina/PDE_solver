@@ -1,0 +1,8 @@
+/media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles/edit_cache.dir
+/media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles/rebuild_cache.dir
+/media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/src/CMakeFiles/PDEsolver.dir
+/media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/src/CMakeFiles/edit_cache.dir
+/media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/src/CMakeFiles/rebuild_cache.dir
+/media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/src/objects/CMakeFiles/Objects.dir
+/media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/src/objects/CMakeFiles/edit_cache.dir
+/media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/src/objects/CMakeFiles/rebuild_cache.dir
