@@ -1,6 +1,7 @@
 
-#include "objects/Mesh.h"
-#include "objects/Node.h"
+#include "functions/Mesh.h"
+#include "functions/Node.h"
+#include "functions/boundaries.h"
 #include <iostream>
 #include <memory>
 #include <vector>
@@ -18,6 +19,7 @@ int main() {
   std::cin >> width;
 
   Mesh myMesh(width, height);
+  setBoundary(myMesh);
 
   return 0;
 }

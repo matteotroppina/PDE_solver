@@ -69,31 +69,47 @@ include src/functions/CMakeFiles/Functions.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/functions/CMakeFiles/Functions.dir/flags.make
 
-src/functions/CMakeFiles/Functions.dir/handle.cpp.o: src/functions/CMakeFiles/Functions.dir/flags.make
-src/functions/CMakeFiles/Functions.dir/handle.cpp.o: ../src/functions/handle.cpp
-src/functions/CMakeFiles/Functions.dir/handle.cpp.o: src/functions/CMakeFiles/Functions.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/functions/CMakeFiles/Functions.dir/handle.cpp.o"
-	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/src/functions && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/functions/CMakeFiles/Functions.dir/handle.cpp.o -MF CMakeFiles/Functions.dir/handle.cpp.o.d -o CMakeFiles/Functions.dir/handle.cpp.o -c /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/handle.cpp
+src/functions/CMakeFiles/Functions.dir/Mesh.cpp.o: src/functions/CMakeFiles/Functions.dir/flags.make
+src/functions/CMakeFiles/Functions.dir/Mesh.cpp.o: ../src/functions/Mesh.cpp
+src/functions/CMakeFiles/Functions.dir/Mesh.cpp.o: src/functions/CMakeFiles/Functions.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/functions/CMakeFiles/Functions.dir/Mesh.cpp.o"
+	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/src/functions && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/functions/CMakeFiles/Functions.dir/Mesh.cpp.o -MF CMakeFiles/Functions.dir/Mesh.cpp.o.d -o CMakeFiles/Functions.dir/Mesh.cpp.o -c /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/Mesh.cpp
 
-src/functions/CMakeFiles/Functions.dir/handle.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Functions.dir/handle.cpp.i"
-	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/src/functions && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/handle.cpp > CMakeFiles/Functions.dir/handle.cpp.i
+src/functions/CMakeFiles/Functions.dir/Mesh.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Functions.dir/Mesh.cpp.i"
+	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/src/functions && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/Mesh.cpp > CMakeFiles/Functions.dir/Mesh.cpp.i
 
-src/functions/CMakeFiles/Functions.dir/handle.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Functions.dir/handle.cpp.s"
-	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/src/functions && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/handle.cpp -o CMakeFiles/Functions.dir/handle.cpp.s
+src/functions/CMakeFiles/Functions.dir/Mesh.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Functions.dir/Mesh.cpp.s"
+	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/src/functions && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/Mesh.cpp -o CMakeFiles/Functions.dir/Mesh.cpp.s
+
+src/functions/CMakeFiles/Functions.dir/boundaries.cpp.o: src/functions/CMakeFiles/Functions.dir/flags.make
+src/functions/CMakeFiles/Functions.dir/boundaries.cpp.o: ../src/functions/boundaries.cpp
+src/functions/CMakeFiles/Functions.dir/boundaries.cpp.o: src/functions/CMakeFiles/Functions.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/functions/CMakeFiles/Functions.dir/boundaries.cpp.o"
+	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/src/functions && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/functions/CMakeFiles/Functions.dir/boundaries.cpp.o -MF CMakeFiles/Functions.dir/boundaries.cpp.o.d -o CMakeFiles/Functions.dir/boundaries.cpp.o -c /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/boundaries.cpp
+
+src/functions/CMakeFiles/Functions.dir/boundaries.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Functions.dir/boundaries.cpp.i"
+	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/src/functions && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/boundaries.cpp > CMakeFiles/Functions.dir/boundaries.cpp.i
+
+src/functions/CMakeFiles/Functions.dir/boundaries.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Functions.dir/boundaries.cpp.s"
+	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/src/functions && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/boundaries.cpp -o CMakeFiles/Functions.dir/boundaries.cpp.s
 
 # Object files for target Functions
 Functions_OBJECTS = \
-"CMakeFiles/Functions.dir/handle.cpp.o"
+"CMakeFiles/Functions.dir/Mesh.cpp.o" \
+"CMakeFiles/Functions.dir/boundaries.cpp.o"
 
 # External object files for target Functions
 Functions_EXTERNAL_OBJECTS =
 
-src/functions/libFunctions.a: src/functions/CMakeFiles/Functions.dir/handle.cpp.o
+src/functions/libFunctions.a: src/functions/CMakeFiles/Functions.dir/Mesh.cpp.o
+src/functions/libFunctions.a: src/functions/CMakeFiles/Functions.dir/boundaries.cpp.o
 src/functions/libFunctions.a: src/functions/CMakeFiles/Functions.dir/build.make
 src/functions/libFunctions.a: src/functions/CMakeFiles/Functions.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libFunctions.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libFunctions.a"
 	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/src/functions && $(CMAKE_COMMAND) -P CMakeFiles/Functions.dir/cmake_clean_target.cmake
 	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/src/functions && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Functions.dir/link.txt --verbose=$(VERBOSE)
 

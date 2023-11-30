@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/objects
+CXX_INCLUDES = -I/media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions
 
 CXX_FLAGS = -std=gnu++17
 

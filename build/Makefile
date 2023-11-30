@@ -130,17 +130,17 @@ PDEsolver/fast:
 .PHONY : PDEsolver/fast
 
 #=============================================================================
-# Target rules for targets named Objects
+# Target rules for targets named Functions
 
 # Build rule for target.
-Objects: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Objects
-.PHONY : Objects
+Functions: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Functions
+.PHONY : Functions
 
 # fast build rule for target.
-Objects/fast:
-	$(MAKE) $(MAKESILENT) -f src/objects/CMakeFiles/Objects.dir/build.make src/objects/CMakeFiles/Objects.dir/build
-.PHONY : Objects/fast
+Functions/fast:
+	$(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/build
+.PHONY : Functions/fast
 
 # Help Target
 help:
@@ -150,7 +150,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Objects"
+	@echo "... Functions"
 	@echo "... PDEsolver"
 .PHONY : help
 

@@ -16,11 +16,15 @@ public:
 
   // method .getNode(x,y)
   // return the a pointer to the (x,y) node
-  Node &getNode(const size_t x, const size_t y);
+  const double getNode(const size_t x, const size_t y);
 
-  // method .printMesh()
-  // print the temperature values of the nodes
-  void printMesh(const size_t width, const size_t height);
+  // method .setNode(x,y,value)
+  // set the temperature value of the node
+  void setNode(const size_t x, const size_t y, const double temperatureValue);
+
+  const size_t getRows();
+
+  const size_t getCols();
 };
 
 #endif

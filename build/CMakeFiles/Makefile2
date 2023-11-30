@@ -79,46 +79,46 @@ clean: src/clean
 
 # Recursive "all" directory target.
 src/all: src/CMakeFiles/PDEsolver.dir/all
-src/all: src/objects/all
+src/all: src/functions/all
 .PHONY : src/all
 
 # Recursive "preinstall" directory target.
-src/preinstall: src/objects/preinstall
+src/preinstall: src/functions/preinstall
 .PHONY : src/preinstall
 
 # Recursive "clean" directory target.
 src/clean: src/CMakeFiles/PDEsolver.dir/clean
-src/clean: src/objects/clean
+src/clean: src/functions/clean
 .PHONY : src/clean
 
 #=============================================================================
-# Directory level rules for directory src/objects
+# Directory level rules for directory src/functions
 
 # Recursive "all" directory target.
-src/objects/all: src/objects/CMakeFiles/Objects.dir/all
-.PHONY : src/objects/all
+src/functions/all: src/functions/CMakeFiles/Functions.dir/all
+.PHONY : src/functions/all
 
 # Recursive "preinstall" directory target.
-src/objects/preinstall:
-.PHONY : src/objects/preinstall
+src/functions/preinstall:
+.PHONY : src/functions/preinstall
 
 # Recursive "clean" directory target.
-src/objects/clean: src/objects/CMakeFiles/Objects.dir/clean
-.PHONY : src/objects/clean
+src/functions/clean: src/functions/CMakeFiles/Functions.dir/clean
+.PHONY : src/functions/clean
 
 #=============================================================================
 # Target rules for target src/CMakeFiles/PDEsolver.dir
 
 # All Build rule for target.
-src/CMakeFiles/PDEsolver.dir/all: src/objects/CMakeFiles/Objects.dir/all
+src/CMakeFiles/PDEsolver.dir/all: src/functions/CMakeFiles/Functions.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/PDEsolver.dir/build.make src/CMakeFiles/PDEsolver.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/PDEsolver.dir/build.make src/CMakeFiles/PDEsolver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles --progress-num=3,4 "Built target PDEsolver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles --progress-num=4,5 "Built target PDEsolver"
 .PHONY : src/CMakeFiles/PDEsolver.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/PDEsolver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/PDEsolver.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/PDEsolver.dir/rule
@@ -133,30 +133,30 @@ src/CMakeFiles/PDEsolver.dir/clean:
 .PHONY : src/CMakeFiles/PDEsolver.dir/clean
 
 #=============================================================================
-# Target rules for target src/objects/CMakeFiles/Objects.dir
+# Target rules for target src/functions/CMakeFiles/Functions.dir
 
 # All Build rule for target.
-src/objects/CMakeFiles/Objects.dir/all:
-	$(MAKE) $(MAKESILENT) -f src/objects/CMakeFiles/Objects.dir/build.make src/objects/CMakeFiles/Objects.dir/depend
-	$(MAKE) $(MAKESILENT) -f src/objects/CMakeFiles/Objects.dir/build.make src/objects/CMakeFiles/Objects.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles --progress-num=1,2 "Built target Objects"
-.PHONY : src/objects/CMakeFiles/Objects.dir/all
+src/functions/CMakeFiles/Functions.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles --progress-num=1,2,3 "Built target Functions"
+.PHONY : src/functions/CMakeFiles/Functions.dir/all
 
 # Build rule for subdir invocation for target.
-src/objects/CMakeFiles/Objects.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/objects/CMakeFiles/Objects.dir/all
+src/functions/CMakeFiles/Functions.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/functions/CMakeFiles/Functions.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles 0
-.PHONY : src/objects/CMakeFiles/Objects.dir/rule
+.PHONY : src/functions/CMakeFiles/Functions.dir/rule
 
 # Convenience name for target.
-Objects: src/objects/CMakeFiles/Objects.dir/rule
-.PHONY : Objects
+Functions: src/functions/CMakeFiles/Functions.dir/rule
+.PHONY : Functions
 
 # clean rule for target.
-src/objects/CMakeFiles/Objects.dir/clean:
-	$(MAKE) $(MAKESILENT) -f src/objects/CMakeFiles/Objects.dir/build.make src/objects/CMakeFiles/Objects.dir/clean
-.PHONY : src/objects/CMakeFiles/Objects.dir/clean
+src/functions/CMakeFiles/Functions.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/clean
+.PHONY : src/functions/CMakeFiles/Functions.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

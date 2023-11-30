@@ -92,7 +92,7 @@ PDEsolver_EXTERNAL_OBJECTS =
 
 src/PDEsolver: src/CMakeFiles/PDEsolver.dir/main.cpp.o
 src/PDEsolver: src/CMakeFiles/PDEsolver.dir/build.make
-src/PDEsolver: src/objects/libObjects.a
+src/PDEsolver: src/functions/libFunctions.a
 src/PDEsolver: src/CMakeFiles/PDEsolver.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable PDEsolver"
 	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PDEsolver.dir/link.txt --verbose=$(VERBOSE)

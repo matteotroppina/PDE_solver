@@ -1,2 +1,2 @@
-/usr/bin/ar qc libFunctions.a CMakeFiles/Functions.dir/handle.cpp.o
+/usr/bin/ar qc libFunctions.a CMakeFiles/Functions.dir/Mesh.cpp.o CMakeFiles/Functions.dir/boundaries.cpp.o
 /usr/bin/ranlib libFunctions.a
