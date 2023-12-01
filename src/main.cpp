@@ -9,17 +9,19 @@
 int main() {
 
   // mesh initialization
-  size_t height; // rows
-  size_t width;  // columns
+  size_t rows;
+  size_t cols; // columns
 
   std::cout << "** Mesh Initialization ** \n";
   std::cout << "Mesh height (rows):";
-  std::cin >> height;
+  std::cin >> rows;
   std::cout << "Mesh width (columns):";
-  std::cin >> width;
+  std::cin >> cols;
 
-  Mesh myMesh(width, height);
+  Mesh myMesh(rows, cols);
+  // std::cout << myMesh.numRows() << " " << myMesh.numCols() << '\n';
   setBoundary(myMesh);
+  myMesh.printMesh(rows, cols);
 
   return 0;
 }

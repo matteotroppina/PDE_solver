@@ -1,11 +1,12 @@
 #include "Mesh.h"
+#include <iostream>
 #include <memory>
 #include <stdexcept>
 #include <vector>
 
 // constructor
-Mesh::Mesh(const size_t width, const size_t height) {
-  nodes = std::make_unique<meshType>(height, std::vector<Node>(width));
+Mesh::Mesh(const size_t rows, const size_t cols) {
+  nodes = std::make_unique<meshType>(rows, std::vector<Node>(cols));
 
   // Check if the grid is allocated
   if ((*nodes).empty() || (*nodes).at(0).empty()) {
@@ -28,6 +29,15 @@ void Mesh::setNode(const size_t x, const size_t y,
   currentNode.temperature = temperatureValue;
 }
 
-const size_t Mesh::getRows() { return nodes->size(); }
+const size_t Mesh::numRows() { return nodes->size(); }
 
-const size_t Mesh::getCols() { return nodes->at(0).size(); }
+const size_t Mesh::numCols() { return nodes->at(0).size(); }
+
+void Mesh::printMesh(const size_t rows, const size_t cols) {
+  for (auto i = 0u; i < rows; ++i) {
+    for (auto j = 0u; j < cols; ++j) {
+      std::cout << nodes->at(i).at(j).temperature << " ";
+    }
+    std::cout << std::endl;
+  }
+}

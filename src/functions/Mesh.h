@@ -2,6 +2,7 @@
 #define _MESH_H
 
 #include "Node.h"
+#include <iostream>
 #include <memory>
 #include <vector>
 
@@ -12,7 +13,7 @@ private:
 
 public:
   // constructor
-  Mesh(const size_t width, const size_t height);
+  Mesh(const size_t rows, const size_t cols);
 
   // method .getNode(x,y)
   // return the a pointer to the (x,y) node
@@ -22,9 +23,11 @@ public:
   // set the temperature value of the node
   void setNode(const size_t x, const size_t y, const double temperatureValue);
 
-  const size_t getRows();
+  const size_t numRows();
 
-  const size_t getCols();
+  const size_t numCols();
+
+  void printMesh(const size_t rows, const size_t cols);
 };
 
 #endif
