@@ -202,6 +202,30 @@ jacobi.cpp.s:
 	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/jacobi.cpp.s
 .PHONY : jacobi.cpp.s
 
+write_to_csv.o: write_to_csv.cpp.o
+.PHONY : write_to_csv.o
+
+# target to build an object file
+write_to_csv.cpp.o:
+	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/write_to_csv.cpp.o
+.PHONY : write_to_csv.cpp.o
+
+write_to_csv.i: write_to_csv.cpp.i
+.PHONY : write_to_csv.i
+
+# target to preprocess a source file
+write_to_csv.cpp.i:
+	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/write_to_csv.cpp.i
+.PHONY : write_to_csv.cpp.i
+
+write_to_csv.s: write_to_csv.cpp.s
+.PHONY : write_to_csv.s
+
+# target to generate assembly for a file
+write_to_csv.cpp.s:
+	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/write_to_csv.cpp.s
+.PHONY : write_to_csv.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -220,6 +244,9 @@ help:
 	@echo "... jacobi.o"
 	@echo "... jacobi.i"
 	@echo "... jacobi.s"
+	@echo "... write_to_csv.o"
+	@echo "... write_to_csv.i"
+	@echo "... write_to_csv.s"
 .PHONY : help
 
 

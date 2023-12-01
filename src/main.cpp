@@ -3,6 +3,7 @@
 #include "functions/Node.h"
 #include "functions/boundaries.h"
 #include "functions/jacobi.h"
+#include "functions/write_to_csv.h"
 #include <iostream>
 #include <memory>
 #include <vector>
@@ -14,6 +15,7 @@ int main() {
   size_t cols{0};
   double tol{0.0};
   size_t maxIterations{0};
+  std::string filename;
 
   std::cout << "** Mesh Initialization ** \n";
   std::cout << "Mesh height (rows):";
@@ -23,16 +25,19 @@ int main() {
   std::cout << std::endl;
 
   Mesh myMesh(rows, cols);
-  // std::cout << myMesh.numRows() << " " << myMesh.numCols() << '\n';
   setBoundary(myMesh);
-  // myMesh.printMesh(rows, cols);
 
   std::cout << "Specify the tolerance for the iterative method: ";
   std::cin >> tol;
   std::cout
       << "Specify the max number of iterations for the iterative method: ";
   std::cin >> maxIterations;
+
+  std::cout << "Specify the CSV file name (.csv): ";
+  std::cin >> filename;
+
   jacobi(myMesh, tol, maxIterations);
+  printToCSV(myMesh, filename);
 
   myMesh.printMesh(rows, cols);
 

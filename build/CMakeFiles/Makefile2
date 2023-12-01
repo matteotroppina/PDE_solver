@@ -113,12 +113,12 @@ src/functions/clean: src/functions/CMakeFiles/Functions.dir/clean
 src/CMakeFiles/PDEsolver.dir/all: src/functions/CMakeFiles/Functions.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/PDEsolver.dir/build.make src/CMakeFiles/PDEsolver.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/PDEsolver.dir/build.make src/CMakeFiles/PDEsolver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles --progress-num=5,6 "Built target PDEsolver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles --progress-num=6,7 "Built target PDEsolver"
 .PHONY : src/CMakeFiles/PDEsolver.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/PDEsolver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/PDEsolver.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/PDEsolver.dir/rule
@@ -139,12 +139,12 @@ src/CMakeFiles/PDEsolver.dir/clean:
 src/functions/CMakeFiles/Functions.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles --progress-num=1,2,3,4 "Built target Functions"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target Functions"
 .PHONY : src/functions/CMakeFiles/Functions.dir/all
 
 # Build rule for subdir invocation for target.
 src/functions/CMakeFiles/Functions.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/functions/CMakeFiles/Functions.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles 0
 .PHONY : src/functions/CMakeFiles/Functions.dir/rule
