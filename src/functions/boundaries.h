@@ -19,7 +19,8 @@ void setBoundaryBottom(Mesh &mesh);
 void setBoundaryLeft(Mesh &mesh);
 // set right boundary
 void setBoundaryRight(Mesh &mesh);
-
+// set the inner nodes temperature to the mean of the boundary temperature
+// values
 void setInnerNodes(Mesh &mesh);
 
 #endif

@@ -178,6 +178,30 @@ boundaries.cpp.s:
 	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/boundaries.cpp.s
 .PHONY : boundaries.cpp.s
 
+jacobi.o: jacobi.cpp.o
+.PHONY : jacobi.o
+
+# target to build an object file
+jacobi.cpp.o:
+	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/jacobi.cpp.o
+.PHONY : jacobi.cpp.o
+
+jacobi.i: jacobi.cpp.i
+.PHONY : jacobi.i
+
+# target to preprocess a source file
+jacobi.cpp.i:
+	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/jacobi.cpp.i
+.PHONY : jacobi.cpp.i
+
+jacobi.s: jacobi.cpp.s
+.PHONY : jacobi.s
+
+# target to generate assembly for a file
+jacobi.cpp.s:
+	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/jacobi.cpp.s
+.PHONY : jacobi.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -193,6 +217,9 @@ help:
 	@echo "... boundaries.o"
 	@echo "... boundaries.i"
 	@echo "... boundaries.s"
+	@echo "... jacobi.o"
+	@echo "... jacobi.i"
+	@echo "... jacobi.s"
 .PHONY : help
 
 

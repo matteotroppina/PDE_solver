@@ -217,8 +217,11 @@ src/CMakeFiles/PDEsolver.dir/main.cpp.o: ../src/main.cpp \
   ../src/functions/Mesh.h \
   /usr/include/c++/11/numeric \
   /usr/include/c++/11/bits/stl_numeric.h \
-  /usr/include/c++/11/pstl/glue_numeric_defs.h
+  /usr/include/c++/11/pstl/glue_numeric_defs.h \
+  ../src/functions/jacobi.h
 
+
+../src/functions/jacobi.h:
 
 /usr/include/c++/11/bits/vector.tcc:
 
