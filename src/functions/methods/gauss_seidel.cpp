@@ -7,33 +7,43 @@
 
 void gaussSeidel(Mesh &mesh, const double tol, const size_t maxIterations) {
   double maxDifference{0.0};
-  double oldTemperature;
-  double newTemperature;
   size_t iterations{0};
 
   do {
-    // iterating over the inner points
+    maxDifference = 0.0; // Reset maxDifference for each iteration
     for (auto i = 1u; i < mesh.numRows() - 1; ++i) {
       for (auto j = 1u; j < mesh.numCols() - 1; ++j) {
-        oldTemperature = mesh.getNode(i, j);
-        newTemperature = (mesh.getNode(i - 1, j) + mesh.getNode(i + 1, j) +
-                          mesh.getNode(i, j - 1) + mesh.getNode(i, j + 1)) /
-                         4;
+        double oldTemperature = mesh.getNode(i, j);
+        double newTemperature =
+            (mesh.getNode(i - 1, j) + mesh.getNode(i + 1, j) +
+             mesh.getNode(i, j - 1) + mesh.getNode(i, j + 1)) /
+            4;
+
         mesh.setNode(i, j, newTemperature);
 
-        if (std::fabs(newTemperature - oldTemperature) > maxDifference) {
-          maxDifference = std::fabs(newTemperature - oldTemperature);
+        double tempDifference = std::fabs(newTemperature - oldTemperature);
+        if (tempDifference > maxDifference) {
+          maxDifference = tempDifference;
         }
       }
     }
 
     iterations++;
 
-  } while (maxDifference > tol && iterations <= maxIterations);
+    // Check for early convergence
+    if (maxDifference <= tol) {
+      break;
+    }
+
+  } while (iterations <= maxIterations);
+
+  std::cout << iterations << '\n';
 
   if (iterations >= maxIterations) {
-    std::cout << "Maximum number of iterations reached without convergence \n"
-              << std::endl;
+    std::cout << "Maximum number of iterations reached without convergence \n";
     std::cout << "The accuracy is: " << maxDifference << std::endl;
+  } else {
+    std::cout << "Convergence reached in " << iterations << " iterations"
+              << '\n';
   }
 }
