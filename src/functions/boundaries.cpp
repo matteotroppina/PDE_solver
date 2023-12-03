@@ -38,7 +38,7 @@ void setBoundaryBottom(Mesh &mesh) {
 void setBoundaryLeft(Mesh &mesh) {
   int choice = -1;
   int temperatureValue;
-  std::cout << "Set Right Boundary conditions: \n"
+  std::cout << "Set Left Boundary conditions: \n"
             << "(1) Dirichlet boundary conditions \n"
             << "(2) Neumann boundary conditions \n";
   std::cout << ">> ";
@@ -53,6 +53,7 @@ void setBoundaryLeft(Mesh &mesh) {
     }
   }
 }
+
 void setBoundaryRight(Mesh &mesh) {
   int choice = -1;
   int temperatureValue;
@@ -75,26 +76,23 @@ void setBoundaryRight(Mesh &mesh) {
 }
 
 void setInnerNodes(Mesh &mesh) {
-  double sumBoundary{0.0};
-  unsigned int count{0};
-
-  // compute the mean of the boundary values
-  for (auto j = 0u; j < mesh.numCols(); ++j) {
-    sumBoundary += mesh.getNode(0, j);
-    sumBoundary += mesh.getNode(mesh.numRows() - 1, j);
-    count += 2;
-  }
-  for (auto i = 1u; i < mesh.numRows() - 1; ++i) {
-    sumBoundary += mesh.getNode(i, 0);
-    sumBoundary += mesh.getNode(i, mesh.numCols() - 1);
-    count += 2;
-  }
-
-  // initialize the inner nodes with mean value
-  const double meanBoundary = sumBoundary / count;
   for (auto i = 1u; i < mesh.numRows() - 1; ++i) {
     for (auto j = 1u; j < mesh.numCols() - 1; ++j) {
-      mesh.setNode(i, j, meanBoundary);
+      // Interpolate along rows (left and right boundaries)
+      double leftValue = mesh.getNode(i, 0);
+      double rightValue = mesh.getNode(i, mesh.numCols() - 1);
+      double rowInterpolation =
+          leftValue + (rightValue - leftValue) * j / (mesh.numCols() - 1);
+
+      // Interpolate along columns (top and bottom boundaries)
+      double topValue = mesh.getNode(0, j);
+      double bottomValue = mesh.getNode(mesh.numRows() - 1, j);
+      double columnInterpolation =
+          topValue + (bottomValue - topValue) * i / (mesh.numRows() - 1);
+
+      // Average the two interpolated values
+      double meanValue = (rowInterpolation + columnInterpolation) / 2.0;
+      mesh.setNode(i, j, meanValue);
     }
   }
 }

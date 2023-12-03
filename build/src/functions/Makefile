@@ -202,6 +202,30 @@ gauss_seidel.cpp.s:
 	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/gauss_seidel.cpp.s
 .PHONY : gauss_seidel.cpp.s
 
+inputHandler.o: inputHandler.cpp.o
+.PHONY : inputHandler.o
+
+# target to build an object file
+inputHandler.cpp.o:
+	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/inputHandler.cpp.o
+.PHONY : inputHandler.cpp.o
+
+inputHandler.i: inputHandler.cpp.i
+.PHONY : inputHandler.i
+
+# target to preprocess a source file
+inputHandler.cpp.i:
+	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/inputHandler.cpp.i
+.PHONY : inputHandler.cpp.i
+
+inputHandler.s: inputHandler.cpp.s
+.PHONY : inputHandler.s
+
+# target to generate assembly for a file
+inputHandler.cpp.s:
+	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/inputHandler.cpp.s
+.PHONY : inputHandler.cpp.s
+
 jacobi.o: jacobi.cpp.o
 .PHONY : jacobi.o
 
@@ -268,6 +292,9 @@ help:
 	@echo "... gauss_seidel.o"
 	@echo "... gauss_seidel.i"
 	@echo "... gauss_seidel.s"
+	@echo "... inputHandler.o"
+	@echo "... inputHandler.i"
+	@echo "... inputHandler.s"
 	@echo "... jacobi.o"
 	@echo "... jacobi.i"
 	@echo "... jacobi.s"

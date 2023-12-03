@@ -19,8 +19,8 @@ void jacobi(Mesh &mesh, const double tol, const size_t maxIterations) {
                          4;
         mesh.setNew(i, j, newTemperature);
 
-        if (fabs(newTemperature - mesh.getNode(i, j)) > maxDifference) {
-          maxDifference = abs(newTemperature - mesh.getNode(i, j));
+        if (std::fabs(newTemperature - mesh.getNode(i, j)) > maxDifference) {
+          maxDifference = std::fabs(newTemperature - mesh.getNode(i, j));
         }
       }
     }

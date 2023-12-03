@@ -21,8 +21,8 @@ void gaussSeidel(Mesh &mesh, const double tol, const size_t maxIterations) {
                          4;
         mesh.setNode(i, j, newTemperature);
 
-        if (fabs(newTemperature - oldTemperature) > maxDifference) {
-          maxDifference = abs(newTemperature - oldTemperature);
+        if (std::fabs(newTemperature - oldTemperature) > maxDifference) {
+          maxDifference = std::fabs(newTemperature - oldTemperature);
         }
       }
     }
