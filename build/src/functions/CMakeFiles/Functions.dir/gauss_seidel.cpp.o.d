@@ -1,5 +1,5 @@
-src/CMakeFiles/PDEsolver.dir/main.cpp.o: \
- /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/main.cpp \
+src/functions/CMakeFiles/Functions.dir/gauss_seidel.cpp.o: \
+ /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/gauss_seidel.cpp \
  /usr/include/stdc-predef.h \
  /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/Mesh.h \
  /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/Node.h \
@@ -182,15 +182,8 @@ src/CMakeFiles/PDEsolver.dir/main.cpp.o: \
  /usr/include/c++/11/bits/locale_facets.tcc \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
- /usr/include/c++/11/bits/istream.tcc \
- /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/Node.h \
- /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/boundaries.h \
- /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/Mesh.h \
- /usr/include/c++/11/numeric /usr/include/c++/11/bits/stl_numeric.h \
- /usr/include/c++/11/pstl/glue_numeric_defs.h \
- /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/jacobi.h \
- /usr/include/c++/11/cmath /usr/include/math.h \
- /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /usr/include/c++/11/bits/istream.tcc /usr/include/c++/11/cmath \
+ /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
@@ -211,10 +204,4 @@ src/CMakeFiles/PDEsolver.dir/main.cpp.o: \
  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
  /usr/include/c++/11/tr1/poly_hermite.tcc \
  /usr/include/c++/11/tr1/poly_laguerre.tcc \
- /usr/include/c++/11/tr1/riemann_zeta.tcc \
- /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/write_to_csv.h \
- /usr/include/c++/11/fstream /usr/include/c++/11/bits/codecvt.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
- /usr/include/c++/11/bits/fstream.tcc \
- /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/gauss_seidel.h
+ /usr/include/c++/11/tr1/riemann_zeta.tcc

@@ -3,6 +3,7 @@
 
 #include "Mesh.h"
 #include "Node.h"
+#include <cmath>
 #include <iostream>
 #include <memory>
 #include <vector>

@@ -5,8 +5,9 @@
 #include <memory>
 #include <vector>
 
-void jacobi(Mesh &mesh, const double tol, const size_t maxIterations) {
+void gaussSeidel(Mesh &mesh, const double tol, const size_t maxIterations) {
   double maxDifference{0.0};
+  double oldTemperature;
   double newTemperature;
   size_t iterations{0};
 
@@ -14,18 +15,17 @@ void jacobi(Mesh &mesh, const double tol, const size_t maxIterations) {
     // iterating over the inner points
     for (auto i = 1u; i < mesh.numRows() - 1; ++i) {
       for (auto j = 1u; j < mesh.numCols() - 1; ++j) {
+        oldTemperature = mesh.getNode(i, j);
         newTemperature = (mesh.getNode(i - 1, j) + mesh.getNode(i + 1, j) +
                           mesh.getNode(i, j - 1) + mesh.getNode(i, j + 1)) /
                          4;
-        mesh.setNew(i, j, newTemperature);
+        mesh.setNode(i, j, newTemperature);
 
-        if (fabs(newTemperature - mesh.getNode(i, j)) > maxDifference) {
-          maxDifference = abs(newTemperature - mesh.getNode(i, j));
+        if (fabs(newTemperature - oldTemperature) > maxDifference) {
+          maxDifference = abs(newTemperature - oldTemperature);
         }
       }
     }
-
-    mesh.updateTemperature();
 
     iterations++;
 

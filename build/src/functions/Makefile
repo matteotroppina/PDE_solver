@@ -178,6 +178,30 @@ boundaries.cpp.s:
 	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/boundaries.cpp.s
 .PHONY : boundaries.cpp.s
 
+gauss_seidel.o: gauss_seidel.cpp.o
+.PHONY : gauss_seidel.o
+
+# target to build an object file
+gauss_seidel.cpp.o:
+	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/gauss_seidel.cpp.o
+.PHONY : gauss_seidel.cpp.o
+
+gauss_seidel.i: gauss_seidel.cpp.i
+.PHONY : gauss_seidel.i
+
+# target to preprocess a source file
+gauss_seidel.cpp.i:
+	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/gauss_seidel.cpp.i
+.PHONY : gauss_seidel.cpp.i
+
+gauss_seidel.s: gauss_seidel.cpp.s
+.PHONY : gauss_seidel.s
+
+# target to generate assembly for a file
+gauss_seidel.cpp.s:
+	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/gauss_seidel.cpp.s
+.PHONY : gauss_seidel.cpp.s
+
 jacobi.o: jacobi.cpp.o
 .PHONY : jacobi.o
 
@@ -241,6 +265,9 @@ help:
 	@echo "... boundaries.o"
 	@echo "... boundaries.i"
 	@echo "... boundaries.s"
+	@echo "... gauss_seidel.o"
+	@echo "... gauss_seidel.i"
+	@echo "... gauss_seidel.s"
 	@echo "... jacobi.o"
 	@echo "... jacobi.i"
 	@echo "... jacobi.s"

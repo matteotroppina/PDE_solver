@@ -1,12 +1,13 @@
 #include "Mesh.h"
+#include <algorithm>
 #include <iostream>
 #include <memory>
 #include <stdexcept>
 #include <vector>
 
-// constructor
-Mesh::Mesh(const size_t rows, const size_t cols) {
-  nodes = std::make_unique<meshType>(rows, std::vector<Node>(cols));
+Mesh::Mesh(const size_t rows, const size_t cols)
+    : rows(rows), cols(cols),
+      nodes(std::make_unique<meshType>(rows, std::vector<Node>(cols))) {
 
   // Check if the grid is allocated
   if ((*nodes).empty() || (*nodes).at(0).empty()) {
@@ -29,6 +30,11 @@ void Mesh::setNode(const size_t x, const size_t y,
   currentNode.temperature = temperatureValue;
 }
 
+void Mesh::setNew(const size_t x, const size_t y, const double newTemperature) {
+  Node &currentNode = nodes->at(x).at(y);
+  currentNode.newTemperature = newTemperature;
+}
+
 const size_t Mesh::numRows() { return nodes->size(); }
 
 const size_t Mesh::numCols() { return nodes->at(0).size(); }
@@ -39,5 +45,14 @@ void Mesh::printMesh(const size_t rows, const size_t cols) {
       std::cout << nodes->at(i).at(j).temperature << " ";
     }
     std::cout << std::endl;
+  }
+}
+
+void Mesh::updateTemperature() {
+  for (auto i = 1u; i < rows - 1; i++) {
+    for (auto j = 1u; j < cols - 1; j++) {
+      std::swap(nodes->at(i).at(j).temperature,
+                nodes->at(i).at(j).newTemperature);
+    }
   }
 }

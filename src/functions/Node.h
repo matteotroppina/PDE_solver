@@ -7,7 +7,7 @@
 struct Node {
   size_t x, y;        // coordinates
   double temperature; // temperature
-
+  double newTemperature;
   // Constructor that initializes temperature to 0
   Node() : temperature(0.0f) {}
 };

@@ -111,10 +111,24 @@ src/functions/CMakeFiles/Functions.dir/jacobi.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Functions.dir/jacobi.cpp.s"
 	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/src/functions && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/jacobi.cpp -o CMakeFiles/Functions.dir/jacobi.cpp.s
 
+src/functions/CMakeFiles/Functions.dir/gauss_seidel.cpp.o: src/functions/CMakeFiles/Functions.dir/flags.make
+src/functions/CMakeFiles/Functions.dir/gauss_seidel.cpp.o: ../src/functions/gauss_seidel.cpp
+src/functions/CMakeFiles/Functions.dir/gauss_seidel.cpp.o: src/functions/CMakeFiles/Functions.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/functions/CMakeFiles/Functions.dir/gauss_seidel.cpp.o"
+	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/src/functions && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/functions/CMakeFiles/Functions.dir/gauss_seidel.cpp.o -MF CMakeFiles/Functions.dir/gauss_seidel.cpp.o.d -o CMakeFiles/Functions.dir/gauss_seidel.cpp.o -c /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/gauss_seidel.cpp
+
+src/functions/CMakeFiles/Functions.dir/gauss_seidel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Functions.dir/gauss_seidel.cpp.i"
+	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/src/functions && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/gauss_seidel.cpp > CMakeFiles/Functions.dir/gauss_seidel.cpp.i
+
+src/functions/CMakeFiles/Functions.dir/gauss_seidel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Functions.dir/gauss_seidel.cpp.s"
+	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/src/functions && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/gauss_seidel.cpp -o CMakeFiles/Functions.dir/gauss_seidel.cpp.s
+
 src/functions/CMakeFiles/Functions.dir/write_to_csv.cpp.o: src/functions/CMakeFiles/Functions.dir/flags.make
 src/functions/CMakeFiles/Functions.dir/write_to_csv.cpp.o: ../src/functions/write_to_csv.cpp
 src/functions/CMakeFiles/Functions.dir/write_to_csv.cpp.o: src/functions/CMakeFiles/Functions.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/functions/CMakeFiles/Functions.dir/write_to_csv.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/functions/CMakeFiles/Functions.dir/write_to_csv.cpp.o"
 	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/src/functions && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/functions/CMakeFiles/Functions.dir/write_to_csv.cpp.o -MF CMakeFiles/Functions.dir/write_to_csv.cpp.o.d -o CMakeFiles/Functions.dir/write_to_csv.cpp.o -c /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/write_to_csv.cpp
 
 src/functions/CMakeFiles/Functions.dir/write_to_csv.cpp.i: cmake_force
@@ -130,6 +144,7 @@ Functions_OBJECTS = \
 "CMakeFiles/Functions.dir/Mesh.cpp.o" \
 "CMakeFiles/Functions.dir/boundaries.cpp.o" \
 "CMakeFiles/Functions.dir/jacobi.cpp.o" \
+"CMakeFiles/Functions.dir/gauss_seidel.cpp.o" \
 "CMakeFiles/Functions.dir/write_to_csv.cpp.o"
 
 # External object files for target Functions
@@ -138,10 +153,11 @@ Functions_EXTERNAL_OBJECTS =
 src/functions/libFunctions.a: src/functions/CMakeFiles/Functions.dir/Mesh.cpp.o
 src/functions/libFunctions.a: src/functions/CMakeFiles/Functions.dir/boundaries.cpp.o
 src/functions/libFunctions.a: src/functions/CMakeFiles/Functions.dir/jacobi.cpp.o
+src/functions/libFunctions.a: src/functions/CMakeFiles/Functions.dir/gauss_seidel.cpp.o
 src/functions/libFunctions.a: src/functions/CMakeFiles/Functions.dir/write_to_csv.cpp.o
 src/functions/libFunctions.a: src/functions/CMakeFiles/Functions.dir/build.make
 src/functions/libFunctions.a: src/functions/CMakeFiles/Functions.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libFunctions.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libFunctions.a"
 	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/src/functions && $(CMAKE_COMMAND) -P CMakeFiles/Functions.dir/cmake_clean_target.cmake
 	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build/src/functions && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Functions.dir/link.txt --verbose=$(VERBOSE)
 
