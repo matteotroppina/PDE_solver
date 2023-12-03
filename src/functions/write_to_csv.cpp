@@ -1,4 +1,4 @@
-#include "Mesh.h"
+#include "objects/Mesh.h"
 #include <fstream>
 #include <iostream>
 #include <memory>

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libObjects.a CMakeFiles/Objects.dir/Mesh.cpp.o
+/usr/bin/ranlib libObjects.a

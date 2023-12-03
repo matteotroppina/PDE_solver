@@ -1,11 +1,11 @@
 
-#include "functions/Mesh.h"
-#include "functions/Node.h"
-#include "functions/boundaries.h"
-#include "functions/inputHandler.h"
-#include "functions/jacobi.h"
+#include "functions/input/boundaries.h"
+#include "functions/input/inputHandler.h"
+#include "functions/methods/gauss_seidel.h"
+#include "functions/methods/jacobi.h"
+#include "functions/objects/Mesh.h"
+#include "functions/objects/Node.h"
 #include "functions/write_to_csv.h"
-#include "gauss_seidel.h"
 #include <iostream>
 #include <memory>
 #include <vector>

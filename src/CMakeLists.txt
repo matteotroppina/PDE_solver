@@ -4,4 +4,7 @@ add_subdirectory(functions)
 add_executable( ${PROJECT_NAME} main.cpp)
 
 #libraries
-target_link_libraries(${PROJECT_NAME} PRIVATE Functions)
+target_link_libraries(${PROJECT_NAME} PRIVATE WriteToFile)
+target_link_libraries(${PROJECT_NAME} PRIVATE Objects)
+target_link_libraries(${PROJECT_NAME} PRIVATE UserInput)
+target_link_libraries(${PROJECT_NAME} PRIVATE IterativeMethods)

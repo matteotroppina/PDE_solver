@@ -1,9 +1,10 @@
 #ifndef _GAUSS_SEIDEL_H_
 #define _GAUSS_SEIDEL_H_
 
-#include "Mesh.h"
-#include "Node.h"
+#include "../objects/Mesh.h"
+#include "../objects/Node.h"
 #include <cmath>
+#include <iostream>
 #include <memory>
 #include <vector>
 

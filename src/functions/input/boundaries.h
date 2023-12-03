@@ -1,8 +1,8 @@
 #ifndef _BOUNDARIES_H_
 #define _BOUNDARIES_H_
 
-#include "Mesh.h"
-#include "Node.h"
+#include "../objects/Mesh.h"
+#include "../objects/Node.h"
 #include <iostream>
 #include <memory>
 #include <numeric>

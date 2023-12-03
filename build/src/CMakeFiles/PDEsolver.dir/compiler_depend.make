@@ -3,8 +3,9 @@
 
 src/CMakeFiles/PDEsolver.dir/main.cpp.o: ../src/main.cpp \
   /usr/include/stdc-predef.h \
-  ../src/functions/Mesh.h \
-  ../src/functions/Node.h \
+  ../src/functions/input/boundaries.h \
+  ../src/functions/objects/Mesh.h \
+  ../src/functions/objects/Node.h \
   /usr/include/c++/11/memory \
   /usr/include/c++/11/bits/stl_algobase.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -227,15 +228,15 @@ src/CMakeFiles/PDEsolver.dir/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
-  ../src/functions/Node.h \
-  ../src/functions/boundaries.h \
-  ../src/functions/Mesh.h \
+  ../src/functions/objects/Node.h \
   /usr/include/c++/11/numeric \
   /usr/include/c++/11/bits/stl_numeric.h \
   /usr/include/c++/11/pstl/glue_numeric_defs.h \
-  ../src/functions/inputHandler.h \
+  ../src/functions/input/inputHandler.h \
   /usr/include/c++/11/limits \
-  ../src/functions/jacobi.h \
+  ../src/functions/methods/gauss_seidel.h \
+  ../src/functions/objects/Mesh.h \
+  ../src/functions/objects/Node.h \
   /usr/include/c++/11/cmath \
   /usr/include/math.h \
   /usr/include/x86_64-linux-gnu/bits/math-vector.h \
@@ -260,16 +261,17 @@ src/CMakeFiles/PDEsolver.dir/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/tr1/poly_hermite.tcc \
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
+  ../src/functions/methods/jacobi.h \
+  ../src/functions/objects/Mesh.h \
+  ../src/functions/objects/Node.h \
   ../src/functions/write_to_csv.h \
+  ../src/functions/objects/Mesh.h \
   /usr/include/c++/11/fstream \
   /usr/include/c++/11/bits/codecvt.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
-  /usr/include/c++/11/bits/fstream.tcc \
-  ../src/functions/gauss_seidel.h
+  /usr/include/c++/11/bits/fstream.tcc
 
-
-../src/functions/gauss_seidel.h:
 
 /usr/include/c++/11/bits/fstream.tcc:
 
@@ -279,7 +281,7 @@ src/CMakeFiles/PDEsolver.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/fstream:
 
-/usr/include/c++/11/exception:
+/usr/include/c++/11/ext/concurrence.h:
 
 /usr/include/c++/11/pstl/pstl_config.h:
 
@@ -290,6 +292,8 @@ src/CMakeFiles/PDEsolver.dir/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11/ext/atomicity.h:
 
 /usr/include/c++/11/bits/stl_pair.h:
+
+../src/functions/methods/jacobi.h:
 
 /usr/include/x86_64-linux-gnu/bits/setjmp.h:
 
@@ -312,10 +316,6 @@ src/CMakeFiles/PDEsolver.dir/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11/bits/basic_string.h:
 
 /usr/include/pthread.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h:
-
-/usr/include/c++/11/ext/concurrence.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
@@ -399,37 +399,23 @@ src/CMakeFiles/PDEsolver.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/exception_defines.h:
 
-/usr/include/c++/11/tr1/exp_integral.tcc:
+/usr/include/c++/11/bits/stl_relops.h:
 
-/usr/include/c++/11/bit:
+../src/functions/objects/Node.h:
 
-/usr/include/c++/11/bits/stl_iterator_base_types.h:
+/usr/include/c++/11/bits/unique_ptr.h:
 
-/usr/include/c++/11/cstdlib:
-
-/usr/include/c++/11/tr1/poly_laguerre.tcc:
-
-/usr/include/c++/11/bits/stl_construct.h:
-
-/usr/include/c++/11/bits/shared_ptr.h:
-
-/usr/include/x86_64-linux-gnu/bits/byteswap.h:
-
-/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
+/usr/include/c++/11/ostream:
 
 /usr/include/c++/11/bits/hash_bytes.h:
 
 /usr/include/c++/11/bits/move.h:
 
-/usr/include/x86_64-linux-gnu/bits/types.h:
+/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+/usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h:
 
-/usr/include/c++/11/bits/stl_relops.h:
-
-/usr/include/c++/11/bits/unique_ptr.h:
-
-/usr/include/c++/11/ostream:
+../src/functions/input/boundaries.h:
 
 /usr/include/x86_64-linux-gnu/sys/single_threaded.h:
 
@@ -437,11 +423,15 @@ src/CMakeFiles/PDEsolver.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/tuple:
 
-/usr/include/c++/11/bits/stl_raw_storage_iter.h:
-
 /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+
+/usr/include/x86_64-linux-gnu/asm/errno.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
 ../src/main.cpp:
 
@@ -459,6 +449,36 @@ src/CMakeFiles/PDEsolver.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
+/usr/include/stdc-predef.h:
+
+/usr/include/c++/11/bits/alloc_traits.h:
+
+/usr/include/c++/11/tr1/exp_integral.tcc:
+
+/usr/include/c++/11/bit:
+
+/usr/include/c++/11/bits/stl_iterator_base_types.h:
+
+/usr/include/c++/11/cstdlib:
+
+/usr/include/c++/11/tr1/poly_laguerre.tcc:
+
+/usr/include/c++/11/bits/stl_construct.h:
+
+/usr/include/c++/11/bits/shared_ptr.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+
+/usr/include/c++/11/bits/stl_raw_storage_iter.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
+
+/usr/include/c++/11/typeinfo:
+
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
 
 /usr/include/c++/11/bits/functexcept.h:
@@ -471,6 +491,8 @@ src/CMakeFiles/PDEsolver.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/stl_iterator.h:
 
+../src/functions/input/inputHandler.h:
+
 /usr/include/c++/11/initializer_list:
 
 /usr/include/c++/11/iosfwd:
@@ -480,12 +502,6 @@ src/CMakeFiles/PDEsolver.dir/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11/debug/debug.h:
 
 /usr/include/features-time64.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
-
-/usr/include/c++/11/bits/concept_check.h:
-
-../src/functions/Mesh.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
@@ -509,15 +525,9 @@ src/CMakeFiles/PDEsolver.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/debug/assertions.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
-/usr/include/x86_64-linux-gnu/sys/cdefs.h:
-
-/usr/include/stdc-predef.h:
-
-/usr/include/c++/11/bits/alloc_traits.h:
-
-../src/functions/Node.h:
+/usr/include/c++/11/bits/concept_check.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:
 
@@ -547,13 +557,7 @@ src/CMakeFiles/PDEsolver.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/stl_numeric.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
-
-/usr/include/c++/11/typeinfo:
-
 /usr/include/c++/11/bits/align.h:
-
-../src/functions/boundaries.h:
 
 /usr/include/c++/11/vector:
 
@@ -562,6 +566,8 @@ src/CMakeFiles/PDEsolver.dir/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11/bits/predefined_ops.h:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/include/c++/11/exception:
 
 /usr/include/c++/11/bits/exception_ptr.h:
 
@@ -727,6 +733,8 @@ src/CMakeFiles/PDEsolver.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/basic_ios.h:
 
+../src/functions/objects/Mesh.h:
+
 /usr/include/c++/11/bits/exception.h:
 
 /usr/include/c++/11/bits/locale_facets.h:
@@ -755,9 +763,7 @@ src/CMakeFiles/PDEsolver.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/limits:
 
-/usr/include/x86_64-linux-gnu/asm/errno.h:
-
-../src/functions/jacobi.h:
+../src/functions/methods/gauss_seidel.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
@@ -776,8 +782,6 @@ src/CMakeFiles/PDEsolver.dir/main.cpp.o: ../src/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 
 /usr/include/c++/11/bits/postypes.h:
-
-../src/functions/inputHandler.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
 

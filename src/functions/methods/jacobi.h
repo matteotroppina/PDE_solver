@@ -1,8 +1,8 @@
 #ifndef _JACOBI_H_
 #define _JACOBI_H_
 
-#include "Mesh.h"
-#include "Node.h"
+#include "../objects/Mesh.h"
+#include "../objects/Node.h"
 #include <cmath>
 #include <iostream>
 #include <memory>

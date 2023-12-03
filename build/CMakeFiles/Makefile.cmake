@@ -13,6 +13,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.22.1/CMakeSystem.cmake"
   "../src/CMakeLists.txt"
   "../src/functions/CMakeLists.txt"
+  "../src/functions/input/CMakeLists.txt"
+  "../src/functions/methods/CMakeLists.txt"
+  "../src/functions/objects/CMakeLists.txt"
   "/usr/share/cmake-3.22/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake"
@@ -43,10 +46,16 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/functions/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/functions/objects/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/functions/input/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/functions/methods/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "src/CMakeFiles/PDEsolver.dir/DependInfo.cmake"
-  "src/functions/CMakeFiles/Functions.dir/DependInfo.cmake"
+  "src/functions/CMakeFiles/WriteToFile.dir/DependInfo.cmake"
+  "src/functions/objects/CMakeFiles/Objects.dir/DependInfo.cmake"
+  "src/functions/input/CMakeFiles/UserInput.dir/DependInfo.cmake"
+  "src/functions/methods/CMakeFiles/IterativeMethods.dir/DependInfo.cmake"
   )

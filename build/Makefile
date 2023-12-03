@@ -130,17 +130,56 @@ PDEsolver/fast:
 .PHONY : PDEsolver/fast
 
 #=============================================================================
-# Target rules for targets named Functions
+# Target rules for targets named WriteToFile
 
 # Build rule for target.
-Functions: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Functions
-.PHONY : Functions
+WriteToFile: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 WriteToFile
+.PHONY : WriteToFile
 
 # fast build rule for target.
-Functions/fast:
-	$(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/build
-.PHONY : Functions/fast
+WriteToFile/fast:
+	$(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/WriteToFile.dir/build.make src/functions/CMakeFiles/WriteToFile.dir/build
+.PHONY : WriteToFile/fast
+
+#=============================================================================
+# Target rules for targets named Objects
+
+# Build rule for target.
+Objects: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Objects
+.PHONY : Objects
+
+# fast build rule for target.
+Objects/fast:
+	$(MAKE) $(MAKESILENT) -f src/functions/objects/CMakeFiles/Objects.dir/build.make src/functions/objects/CMakeFiles/Objects.dir/build
+.PHONY : Objects/fast
+
+#=============================================================================
+# Target rules for targets named UserInput
+
+# Build rule for target.
+UserInput: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 UserInput
+.PHONY : UserInput
+
+# fast build rule for target.
+UserInput/fast:
+	$(MAKE) $(MAKESILENT) -f src/functions/input/CMakeFiles/UserInput.dir/build.make src/functions/input/CMakeFiles/UserInput.dir/build
+.PHONY : UserInput/fast
+
+#=============================================================================
+# Target rules for targets named IterativeMethods
+
+# Build rule for target.
+IterativeMethods: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 IterativeMethods
+.PHONY : IterativeMethods
+
+# fast build rule for target.
+IterativeMethods/fast:
+	$(MAKE) $(MAKESILENT) -f src/functions/methods/CMakeFiles/IterativeMethods.dir/build.make src/functions/methods/CMakeFiles/IterativeMethods.dir/build
+.PHONY : IterativeMethods/fast
 
 # Help Target
 help:
@@ -150,8 +189,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Functions"
+	@echo "... IterativeMethods"
+	@echo "... Objects"
 	@echo "... PDEsolver"
+	@echo "... UserInput"
+	@echo "... WriteToFile"
 .PHONY : help
 
 

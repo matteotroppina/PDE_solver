@@ -117,145 +117,25 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/functions/CMakeFiles/Functions.dir/rule:
-	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/functions/CMakeFiles/Functions.dir/rule
-.PHONY : src/functions/CMakeFiles/Functions.dir/rule
+src/functions/CMakeFiles/WriteToFile.dir/rule:
+	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/functions/CMakeFiles/WriteToFile.dir/rule
+.PHONY : src/functions/CMakeFiles/WriteToFile.dir/rule
 
 # Convenience name for target.
-Functions: src/functions/CMakeFiles/Functions.dir/rule
-.PHONY : Functions
+WriteToFile: src/functions/CMakeFiles/WriteToFile.dir/rule
+.PHONY : WriteToFile
 
 # fast build rule for target.
-Functions/fast:
-	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/build
-.PHONY : Functions/fast
-
-Mesh.o: Mesh.cpp.o
-.PHONY : Mesh.o
-
-# target to build an object file
-Mesh.cpp.o:
-	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/Mesh.cpp.o
-.PHONY : Mesh.cpp.o
-
-Mesh.i: Mesh.cpp.i
-.PHONY : Mesh.i
-
-# target to preprocess a source file
-Mesh.cpp.i:
-	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/Mesh.cpp.i
-.PHONY : Mesh.cpp.i
-
-Mesh.s: Mesh.cpp.s
-.PHONY : Mesh.s
-
-# target to generate assembly for a file
-Mesh.cpp.s:
-	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/Mesh.cpp.s
-.PHONY : Mesh.cpp.s
-
-boundaries.o: boundaries.cpp.o
-.PHONY : boundaries.o
-
-# target to build an object file
-boundaries.cpp.o:
-	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/boundaries.cpp.o
-.PHONY : boundaries.cpp.o
-
-boundaries.i: boundaries.cpp.i
-.PHONY : boundaries.i
-
-# target to preprocess a source file
-boundaries.cpp.i:
-	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/boundaries.cpp.i
-.PHONY : boundaries.cpp.i
-
-boundaries.s: boundaries.cpp.s
-.PHONY : boundaries.s
-
-# target to generate assembly for a file
-boundaries.cpp.s:
-	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/boundaries.cpp.s
-.PHONY : boundaries.cpp.s
-
-gauss_seidel.o: gauss_seidel.cpp.o
-.PHONY : gauss_seidel.o
-
-# target to build an object file
-gauss_seidel.cpp.o:
-	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/gauss_seidel.cpp.o
-.PHONY : gauss_seidel.cpp.o
-
-gauss_seidel.i: gauss_seidel.cpp.i
-.PHONY : gauss_seidel.i
-
-# target to preprocess a source file
-gauss_seidel.cpp.i:
-	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/gauss_seidel.cpp.i
-.PHONY : gauss_seidel.cpp.i
-
-gauss_seidel.s: gauss_seidel.cpp.s
-.PHONY : gauss_seidel.s
-
-# target to generate assembly for a file
-gauss_seidel.cpp.s:
-	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/gauss_seidel.cpp.s
-.PHONY : gauss_seidel.cpp.s
-
-inputHandler.o: inputHandler.cpp.o
-.PHONY : inputHandler.o
-
-# target to build an object file
-inputHandler.cpp.o:
-	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/inputHandler.cpp.o
-.PHONY : inputHandler.cpp.o
-
-inputHandler.i: inputHandler.cpp.i
-.PHONY : inputHandler.i
-
-# target to preprocess a source file
-inputHandler.cpp.i:
-	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/inputHandler.cpp.i
-.PHONY : inputHandler.cpp.i
-
-inputHandler.s: inputHandler.cpp.s
-.PHONY : inputHandler.s
-
-# target to generate assembly for a file
-inputHandler.cpp.s:
-	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/inputHandler.cpp.s
-.PHONY : inputHandler.cpp.s
-
-jacobi.o: jacobi.cpp.o
-.PHONY : jacobi.o
-
-# target to build an object file
-jacobi.cpp.o:
-	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/jacobi.cpp.o
-.PHONY : jacobi.cpp.o
-
-jacobi.i: jacobi.cpp.i
-.PHONY : jacobi.i
-
-# target to preprocess a source file
-jacobi.cpp.i:
-	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/jacobi.cpp.i
-.PHONY : jacobi.cpp.i
-
-jacobi.s: jacobi.cpp.s
-.PHONY : jacobi.s
-
-# target to generate assembly for a file
-jacobi.cpp.s:
-	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/jacobi.cpp.s
-.PHONY : jacobi.cpp.s
+WriteToFile/fast:
+	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/WriteToFile.dir/build.make src/functions/CMakeFiles/WriteToFile.dir/build
+.PHONY : WriteToFile/fast
 
 write_to_csv.o: write_to_csv.cpp.o
 .PHONY : write_to_csv.o
 
 # target to build an object file
 write_to_csv.cpp.o:
-	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/write_to_csv.cpp.o
+	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/WriteToFile.dir/build.make src/functions/CMakeFiles/WriteToFile.dir/write_to_csv.cpp.o
 .PHONY : write_to_csv.cpp.o
 
 write_to_csv.i: write_to_csv.cpp.i
@@ -263,7 +143,7 @@ write_to_csv.i: write_to_csv.cpp.i
 
 # target to preprocess a source file
 write_to_csv.cpp.i:
-	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/write_to_csv.cpp.i
+	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/WriteToFile.dir/build.make src/functions/CMakeFiles/WriteToFile.dir/write_to_csv.cpp.i
 .PHONY : write_to_csv.cpp.i
 
 write_to_csv.s: write_to_csv.cpp.s
@@ -271,7 +151,7 @@ write_to_csv.s: write_to_csv.cpp.s
 
 # target to generate assembly for a file
 write_to_csv.cpp.s:
-	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/Functions.dir/build.make src/functions/CMakeFiles/Functions.dir/write_to_csv.cpp.s
+	cd /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/build && $(MAKE) $(MAKESILENT) -f src/functions/CMakeFiles/WriteToFile.dir/build.make src/functions/CMakeFiles/WriteToFile.dir/write_to_csv.cpp.s
 .PHONY : write_to_csv.cpp.s
 
 # Help Target
@@ -282,22 +162,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Functions"
-	@echo "... Mesh.o"
-	@echo "... Mesh.i"
-	@echo "... Mesh.s"
-	@echo "... boundaries.o"
-	@echo "... boundaries.i"
-	@echo "... boundaries.s"
-	@echo "... gauss_seidel.o"
-	@echo "... gauss_seidel.i"
-	@echo "... gauss_seidel.s"
-	@echo "... inputHandler.o"
-	@echo "... inputHandler.i"
-	@echo "... inputHandler.s"
-	@echo "... jacobi.o"
-	@echo "... jacobi.i"
-	@echo "... jacobi.s"
+	@echo "... WriteToFile"
 	@echo "... write_to_csv.o"
 	@echo "... write_to_csv.i"
 	@echo "... write_to_csv.s"

@@ -1,8 +1,9 @@
 src/CMakeFiles/PDEsolver.dir/main.cpp.o: \
  /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/main.cpp \
  /usr/include/stdc-predef.h \
- /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/Mesh.h \
- /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/Node.h \
+ /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/input/boundaries.h \
+ /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/input/../objects/Mesh.h \
+ /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/input/../objects/Node.h \
  /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -183,14 +184,14 @@ src/CMakeFiles/PDEsolver.dir/main.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/Node.h \
- /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/boundaries.h \
- /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/Mesh.h \
+ /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/input/../objects/Node.h \
  /usr/include/c++/11/numeric /usr/include/c++/11/bits/stl_numeric.h \
  /usr/include/c++/11/pstl/glue_numeric_defs.h \
- /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/inputHandler.h \
+ /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/input/inputHandler.h \
  /usr/include/c++/11/limits \
- /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/jacobi.h \
+ /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/methods/gauss_seidel.h \
+ /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/methods/../objects/Mesh.h \
+ /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/methods/../objects/Node.h \
  /usr/include/c++/11/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -213,9 +214,12 @@ src/CMakeFiles/PDEsolver.dir/main.cpp.o: \
  /usr/include/c++/11/tr1/poly_hermite.tcc \
  /usr/include/c++/11/tr1/poly_laguerre.tcc \
  /usr/include/c++/11/tr1/riemann_zeta.tcc \
+ /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/methods/jacobi.h \
+ /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/objects/Mesh.h \
+ /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/objects/Node.h \
  /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/write_to_csv.h \
+ /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/objects/Mesh.h \
  /usr/include/c++/11/fstream /usr/include/c++/11/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
- /usr/include/c++/11/bits/fstream.tcc \
- /media/matteot/mtdrive/CSE/ws2023/advanced-programming/project/code/38/src/functions/gauss_seidel.h
+ /usr/include/c++/11/bits/fstream.tcc

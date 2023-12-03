@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/PDEsolver.dir/main.cpp.o -o PDEsolver  functions/libFunctions.a 
+/usr/bin/c++ CMakeFiles/PDEsolver.dir/main.cpp.o -o PDEsolver  functions/libWriteToFile.a functions/objects/libObjects.a functions/input/libUserInput.a functions/methods/libIterativeMethods.a 
