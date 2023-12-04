@@ -5,6 +5,9 @@
 #include <memory>
 #include <vector>
 
+/**
+ * @brief Implementation of the Gauss-Seidel iterative method.
+ */
 void gaussSeidel(Mesh &mesh, const double tol, const size_t maxIterations) {
   double maxDifference{0.0};
   size_t iterations{0};
@@ -36,8 +39,6 @@ void gaussSeidel(Mesh &mesh, const double tol, const size_t maxIterations) {
     }
 
   } while (iterations <= maxIterations);
-
-  std::cout << iterations << '\n';
 
   if (iterations >= maxIterations) {
     std::cout << "Maximum number of iterations reached without convergence \n";

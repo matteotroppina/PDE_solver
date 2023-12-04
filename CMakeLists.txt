@@ -4,6 +4,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(SRC src)
 project(PDEsolver
-    DESCRIPTION "PDE solver for the steady-state solutions for the 2D heat equation.")
+    DESCRIPTION "PDE solver for the steady-state 2D heat equation solution.")
 
 add_subdirectory(${SRC})

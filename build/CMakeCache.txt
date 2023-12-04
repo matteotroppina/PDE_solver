@@ -148,7 +148,7 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
 //Value Computed by CMake
-CMAKE_PROJECT_DESCRIPTION:STATIC=PDE solver for the steady-state solutions for the 2D heat equation.
+CMAKE_PROJECT_DESCRIPTION:STATIC=PDE solver for the steady-state 2D heat equation solution.
 
 //Value Computed by CMake
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=

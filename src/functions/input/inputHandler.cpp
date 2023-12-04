@@ -4,6 +4,9 @@
 
 namespace input {
 
+/**
+ * @brief Implementation of getRowsInput.
+ */
 size_t getRowsInput() {
   // Reading rows
   std::cout << "Mesh height (rows): ";
@@ -21,6 +24,9 @@ size_t getRowsInput() {
   }
 }
 
+/**
+ * @brief Implementation of getColsInput.
+ */
 size_t getColsInput() {
   std::cout << "Mesh width (columns): ";
   while (true) {
@@ -37,6 +43,9 @@ size_t getColsInput() {
   }
 }
 
+/**
+ * @brief Implementation of getMethodChoice.
+ */
 unsigned int getMethodChoice() {
   unsigned int choice;
   while (true) {
@@ -55,6 +64,9 @@ unsigned int getMethodChoice() {
   }
 }
 
+/**
+ * @brief Implementation of getTolerance.
+ */
 double getTolerance() {
   std::cout << "Specify the tolerance for the iterative method: ";
   while (true) {
@@ -71,6 +83,10 @@ double getTolerance() {
   }
 }
 
+/**
+ * @brief Reads and validates user input for the maximum number of iterations.
+ * @return The maximum number of iterations as a size_t.
+ */
 size_t getMaxIterations() {
   int maxIterations;
   while (true) {
@@ -85,6 +101,10 @@ size_t getMaxIterations() {
   }
 }
 
+/**
+ * @brief Reads user input for the filename.
+ * @return The filename as a std::string.
+ */
 std::string getFileName() {
   std::string fileName;
   std::cout << "Enter the file name for output: ";

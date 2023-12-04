@@ -1,83 +1,109 @@
 #include "../objects/Mesh.h"
 #include "../objects/Node.h"
 #include <iostream>
+#include <limits>
 #include <memory>
 #include <numeric>
 #include <vector>
 
-void setBoundaryTop(Mesh &mesh) {
-  int choice = -1;
-  int temperatureValue;
-  std::cout << "Set Top Boundary conditions: \n"
-            << "(1) Dirichlet boundary conditions \n"
-            << "(2) Neumann boundary conditions \n";
-  std::cout << ">> ";
-  std::cin >> choice;
-  std::cout << "Set temperature value T[top,:]: ";
-  std::cin >> temperatureValue;
-  for (auto j = 0u; j < mesh.numCols(); ++j) {
-    mesh.setNode(0, j, temperatureValue);
-  }
-}
-
-void setBoundaryBottom(Mesh &mesh) {
-  int choice = -1;
-  int temperatureValue;
-  std::cout << "Set Bottom Boundary conditions: \n"
-            << "(1) Dirichlet boundary conditions \n"
-            << "(2) Neumann boundary conditions \n";
-  std::cout << ">> ";
-  std::cin >> choice;
-  std::cout << "Set temperature value T[bottom,:]: ";
-  std::cin >> temperatureValue;
-  for (auto j = 0u; j < mesh.numCols(); ++j) {
-    mesh.setNode(mesh.numRows() - 1, j, temperatureValue);
-  }
-}
-
-void setBoundaryLeft(Mesh &mesh) {
-  int choice = -1;
-  int temperatureValue;
-  std::cout << "Set Left Boundary conditions: \n"
-            << "(1) Dirichlet boundary conditions \n"
-            << "(2) Neumann boundary conditions \n";
-  std::cout << ">> ";
-  std::cin >> choice;
-  std::cout << "Set temperature value T[:,left]: ";
-  std::cin >> temperatureValue;
-  for (auto i = 0u; i < mesh.numRows(); ++i) {
-    if (i == 0 || i == mesh.numRows() - 1) {
-      mesh.setNode(i, 0, ((mesh.getNode(i, 0) + temperatureValue) / 2));
+/**
+ * @brief Prompts the user for a boundary value and validates the input.
+ *
+ * This function continuously prompts the user for a value until a valid
+ * double is entered. It uses the provided prompt message during each request.
+ *
+ * @param prompt The message displayed to the user.
+ * @return The validated double value entered by the user.
+ */
+double getBoundary(const std::string &prompt) {
+  double inputValue;
+  while (true) {
+    std::cout << prompt;
+    if (std::cin >> inputValue) {
+      return inputValue;
     } else {
-      mesh.setNode(i, 0, temperatureValue);
+      std::cerr << "Invalid input. Please enter a valid value.\n";
+      std::cin.clear();
+      std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     }
   }
 }
 
-void setBoundaryRight(Mesh &mesh) {
-  int choice = -1;
-  int temperatureValue;
-  std::cout << "Set Right Boundary conditions: \n"
-            << "(1) Dirichlet boundary conditions \n"
-            << "(2) Neumann boundary conditions \n";
-  std::cout << ">> ";
-  std::cin >> choice;
-  std::cout << "Set temperature value T[:,right]: ";
-  std::cin >> temperatureValue;
-  for (auto i = 0u; i < mesh.numRows(); ++i) {
-    if (i == 0 || i == mesh.numRows() - 1) {
-      mesh.setNode(
-          i, mesh.numCols() - 1,
-          ((mesh.getNode(i, mesh.numCols() - 1) + temperatureValue) / 2.0));
+/**
+ * @brief Sets the boundary temperature for a specified boundary of the mesh.
+ *
+ * The function sets the boundary condition (temperature) for either the top,
+ * bottom, left, or right boundary of the mesh. It handles corners by averaging
+ * the temperature value with adjacent values.
+ *
+ * @param mesh The mesh object to set the boundary on.
+ * @param boundary A string representing the boundary ("Top", "Bottom", "Left",
+ * "Right").
+ */
+void setBoundary(Mesh &mesh, const std::string &boundary) {
+  double temperatureValue = getBoundary(boundary +
+                                        " boundary \n"
+                                        "Set temperature value T[" +
+                                        boundary + "]: ");
+
+  unsigned int start, end, fixedIndex;
+  bool isHorizontal = (boundary == "Top" || boundary == "Bottom");
+
+  start = 0;
+  end = isHorizontal ? mesh.numCols() : mesh.numRows();
+  fixedIndex = isHorizontal ? (boundary == "Top" ? 0 : mesh.numRows() - 1)
+                            : (boundary == "Left" ? 0 : mesh.numCols() - 1);
+
+  for (auto i = start; i < end; ++i) {
+    // Determine the current row and column indices based on the orientation
+    // (horizontal or vertical)
+    unsigned rowIndex = isHorizontal ? fixedIndex : i;
+    unsigned colIndex = isHorizontal ? i : fixedIndex;
+
+    // Check if the current node is at a corner of the mesh
+    if ((rowIndex == 0 || rowIndex == mesh.numRows() - 1) &&
+        (colIndex == 0 || colIndex == mesh.numCols() - 1)) {
+
+      double adjacentValue1, adjacentValue2;
+      // Determine the first adjacent value based on the row index
+      // If we are at the top row, get the value from the row below
+      // If we are at the bottom row, get the value from the row above
+      if (rowIndex == 0) {
+        adjacentValue1 = mesh.getNode(1, colIndex); // Below
+      } else {
+        adjacentValue1 = mesh.getNode(mesh.numRows() - 2, colIndex); // Above
+      }
+      if (colIndex == 0) {
+        adjacentValue2 = mesh.getNode(rowIndex, 1); // Right
+      } else {
+        adjacentValue2 = mesh.getNode(rowIndex, mesh.numCols() - 2); // Left
+      }
+      // Set the node's value to the average of the specified temperature value
+      // and the two adjacent values
+      mesh.setNode(rowIndex, colIndex,
+                   (temperatureValue + adjacentValue1 + adjacentValue2) / 3.0);
     } else {
-      mesh.setNode(i, mesh.numCols() - 1, temperatureValue);
+      // For non-corner nodes, simply set the node's value to the specified
+      // temperature value
+      mesh.setNode(rowIndex, colIndex, temperatureValue);
     }
   }
 }
 
+/**
+ * @brief Sets the inner nodes of the mesh based on interpolation between
+ * boundary values.
+ *
+ * This function interpolates values for each inner node of the mesh, based on
+ * the values of its boundary nodes. It uses linear interpolation along both
+ * rows and columns.
+ *
+ * @param mesh The mesh object whose inner nodes are to be set.
+ */
 void setInnerNodes(Mesh &mesh) {
   for (auto i = 1u; i < mesh.numRows() - 1; ++i) {
     for (auto j = 1u; j < mesh.numCols() - 1; ++j) {
+
       // Interpolate along rows (left and right boundaries)
       double leftValue = mesh.getNode(i, 0);
       double rightValue = mesh.getNode(i, mesh.numCols() - 1);
@@ -97,10 +123,20 @@ void setInnerNodes(Mesh &mesh) {
   }
 }
 
-void setBoundary(Mesh &mesh) {
-  setBoundaryTop(mesh);
-  setBoundaryBottom(mesh);
-  setBoundaryLeft(mesh);
-  setBoundaryRight(mesh);
+/**
+ * @brief Sets the Dirichlet boundary conditions for all four boundaries of the
+ * mesh.
+ *
+ * This function sets Dirichlet boundary conditions (specific temperature
+ * values) for the top, bottom, left, and right boundaries of the mesh. It then
+ * sets the values of inner nodes based on interpolation.
+ *
+ * @param mesh The mesh object to set the Dirichlet boundaries on.
+ */
+void setDirichletBoundaries(Mesh &mesh) {
+  setBoundary(mesh, "Top");
+  setBoundary(mesh, "Bottom");
+  setBoundary(mesh, "Left");
+  setBoundary(mesh, "Right");
   setInnerNodes(mesh);
 }

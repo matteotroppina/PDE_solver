@@ -5,6 +5,9 @@
 #include <memory>
 #include <vector>
 
+/**
+ * @brief Implementation of the Jacobi iterative method.
+ */
 void jacobi(Mesh &mesh, const double tol, const size_t maxIterations) {
   double maxDifference{0.0};
   size_t iterations{0};

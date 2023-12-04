@@ -1,4 +1,3 @@
-
 #include "functions/input/boundaries.h"
 #include "functions/input/inputHandler.h"
 #include "functions/methods/gauss_seidel.h"
@@ -27,13 +26,13 @@ int main() {
   // iterative method choice
   methodChoice = input::getMethodChoice();
 
-  // set tolerance
+  // set tolerance for the chosen iterative method
   tol = input::getTolerance();
 
   // set iterations limit for the chosen iterative method
   maxIterations = input::getMaxIterations();
 
-  setBoundary(myMesh);
+  setDirichletBoundaries(myMesh);
   myMesh.printMesh(rows, cols);
 
   if (methodChoice == 1) {
@@ -42,7 +41,7 @@ int main() {
     gaussSeidel(myMesh, tol, maxIterations);
   }
 
-  // set the output filename
+  // set the output filename.csv
   filename = input::getFileName();
   printToCSV(myMesh, filename);
 

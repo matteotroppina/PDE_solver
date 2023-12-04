@@ -4,23 +4,40 @@
 #include "../objects/Mesh.h"
 #include "../objects/Node.h"
 #include <iostream>
+#include <limits>
 #include <memory>
 #include <numeric>
 #include <vector>
 
-// set boundaries - calls the setBoundary functions
-void setBoundary(Mesh &mesh);
+/**
+ * @file boundaries.h
+ * @brief Functions to set boundary conditions on a mesh.
+ */
 
-// set top boundary
-void setBoundaryTop(Mesh &mesh);
-// set bottom boundary
-void setBoundaryBottom(Mesh &mesh);
-// set left boundary
-void setBoundaryLeft(Mesh &mesh);
-// set right boundary
-void setBoundaryRight(Mesh &mesh);
-// set the inner nodes temperature to the mean of the boundary temperature
-// values
+/**
+ * @brief Prompts for and returns a boundary value.
+ * @param prompt The prompt message.
+ * @return The boundary value.
+ */
+double getBoundary(const std::string &prompt);
+
+/**
+ * @brief Sets a boundary temperature on the mesh.
+ * @param mesh The mesh to modify.
+ * @param boundary The boundary to set.
+ */
+void setBoundary(Mesh &mesh, const std::string &boundary);
+
+/**
+ * @brief Sets the inner nodes of a mesh based on boundary values.
+ * @param mesh The mesh to modify.
+ */
 void setInnerNodes(Mesh &mesh);
+
+/**
+ * @brief Sets Dirichlet boundaries on all sides of the mesh.
+ * @param mesh The mesh to modify.
+ */
+void setDirichletBoundaries(Mesh &mesh);
 
 #endif
