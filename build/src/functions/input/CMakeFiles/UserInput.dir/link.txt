@@ -1,2 +1,0 @@
-/usr/bin/ar qc libUserInput.a CMakeFiles/UserInput.dir/inputHandler.cpp.o CMakeFiles/UserInput.dir/boundaries.cpp.o
-/usr/bin/ranlib libUserInput.a

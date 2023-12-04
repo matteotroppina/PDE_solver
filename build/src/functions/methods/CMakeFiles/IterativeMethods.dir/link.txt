@@ -1,2 +1,0 @@
-/usr/bin/ar qc libIterativeMethods.a CMakeFiles/IterativeMethods.dir/jacobi.cpp.o CMakeFiles/IterativeMethods.dir/gauss_seidel.cpp.o
-/usr/bin/ranlib libIterativeMethods.a

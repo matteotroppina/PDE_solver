@@ -1,0 +1,7 @@
+add_executable(jacobi_test jacobiTest.cpp)
+
+
+target_link_libraries(jacobi_test PRIVATE WriteToFile)
+target_link_libraries(jacobi_test PRIVATE Objects)
+target_link_libraries(jacobi_test PRIVATE UserInput)
+target_link_libraries(jacobi_test PRIVATE IterativeMethods)

@@ -1,2 +1,0 @@
-/usr/bin/ar qc libWriteToFile.a CMakeFiles/WriteToFile.dir/write_to_csv.cpp.o
-/usr/bin/ranlib libWriteToFile.a

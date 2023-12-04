@@ -1,2 +1,0 @@
-/usr/bin/ar qc libFunctions.a CMakeFiles/Functions.dir/Mesh.cpp.o CMakeFiles/Functions.dir/boundaries.cpp.o CMakeFiles/Functions.dir/jacobi.cpp.o CMakeFiles/Functions.dir/gauss_seidel.cpp.o CMakeFiles/Functions.dir/write_to_csv.cpp.o CMakeFiles/Functions.dir/inputHandler.cpp.o
-/usr/bin/ranlib libFunctions.a
