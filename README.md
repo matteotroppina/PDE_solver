@@ -4,7 +4,7 @@ This C++ program provides a solver for the steady-state 2D heat equation with Di
 
 ## Table of Contents
 
-- [Overview](#overview
+- [Overview](#overview)
 - [Building](#building)
 
 ## Overview
