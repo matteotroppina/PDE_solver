@@ -35,18 +35,18 @@ void setBoundary(Mesh &mesh, const std::string &boundary);
  * @param temperatureValue Boundary temperature value
  */
 void setBoundary(Mesh &mesh, const std::string &boundary,
-                 double temperatureValue) {
+                 double temperatureValue);
 
-    /**
-     * @brief Sets the inner nodes of a mesh based on boundary values.
-     * @param mesh The mesh to modify.
-     */
-    void setInnerNodes(Mesh & mesh);
+/**
+ * @brief Sets the inner nodes of a mesh based on boundary values.
+ * @param mesh The mesh to modify.
+ */
+void setInnerNodes(Mesh &mesh);
 
-    /**
-     * @brief Sets Dirichlet boundaries on all sides of the mesh.
-     * @param mesh The mesh to modify.
-     */
-    void setDirichletBoundaries(Mesh & mesh);
+/**
+ * @brief Sets Dirichlet boundaries on all sides of the mesh.
+ * @param mesh The mesh to modify.
+ */
+void setDirichletBoundaries(Mesh &mesh);
 
 #endif

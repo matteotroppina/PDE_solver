@@ -19,3 +19,8 @@ To compile the program, make sure you have a C++ compiler installed, such as g++
 - cd build
 - cmake ..
 - make
+
+Then the executable "PDEsolver" is created, run one of this commands (test/user input):
+
+- ./src/PDEsolver --test
+- ./src/PDEsolver
