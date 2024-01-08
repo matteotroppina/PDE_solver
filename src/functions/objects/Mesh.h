@@ -23,7 +23,7 @@ using meshType = std::vector<std::vector<Node>>;
  */
 class Mesh {
 private:
-  std::unique_ptr<meshType> nodes; // pointer to a 2D vector of nodes
+  std::unique_ptr<meshType> currentGrid; // pointer to a 2D vector of nodes
   size_t rows, cols;
 
 public:

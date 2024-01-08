@@ -8,16 +8,20 @@
 #include "functions/write_to_csv.h"
 #include <iostream>
 #include <memory>
+#include <stdexcept>
 #include <vector>
 
 int main(int argc, char *argv[]) {
 
   if (argc > 1 && std::string(argv[1]) == "--test") {
     // Run the test function if the "--test" argument is passed
+    std::cout << "Running Jacobi test...\n"; // Debugging line
     if (testJacobi()) {
       std::cout << "Jacobi test passed." << std::endl;
+      return 0;
     } else {
-      std::cout << "Jacobi test failed." << std::endl;
+      std::cerr << "Jacobi test failed." << std::endl;
+      return -1;
     }
   } else {
 
@@ -43,7 +47,6 @@ int main(int argc, char *argv[]) {
     maxIterations = input::getMaxIterations();
 
     setDirichletBoundaries(myMesh);
-    myMesh.printMesh(rows, cols);
 
     if (methodChoice == 1) {
       jacobi(myMesh, tol, maxIterations);

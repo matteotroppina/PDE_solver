@@ -1,24 +1,28 @@
 #include "inputHandler.h"
+#include <cmath>
 #include <iostream>
 #include <limits>
+#include <stdexcept>
 #include <string>
 
 namespace input {
 
 /**
- * @brief Implementation of getRowsInput.
+ * @brief  Implementation of getRowsInput.
+ * @return The number of rows as a size_t
+ * @throws Invalid Input
  */
 size_t getRowsInput() {
   // Reading rows
   std::cout << "Mesh height (rows): ";
   while (true) {
-    int temp;
-    if (std::cin >> temp && temp > 0) {
-      return static_cast<size_t>(temp);
+    double rows;
+    if (std::cin >> rows && rows > 0 && std::floor(rows) == rows) {
+      return static_cast<size_t>(rows);
     } else {
       std::cerr << "Warning: Invalid input. Please enter a positive integer "
                    "for rows.\n";
-      std::cin.clear();
+      std::cin.clear(); // Reset the error flags
       std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
       std::cout << "Mesh height (rows): ";
     }
@@ -26,18 +30,20 @@ size_t getRowsInput() {
 }
 
 /**
- * @brief Implementation of getColsInput.
+ * @brief  Implementation of getColsInput.
+ * @return The number of columns as size_t
+ * @throws Invalid Input
  */
 size_t getColsInput() {
   std::cout << "Mesh width (columns): ";
   while (true) {
-    int temp;
-    if (std::cin >> temp && temp > 0) {
-      return static_cast<size_t>(temp);
+    double cols;
+    if (std::cin >> cols && cols > 0 && std::floor(cols) == cols) {
+      return static_cast<size_t>(cols);
     } else {
       std::cerr << "Warning: Invalid input. Please enter a positive integer "
                    "for columns.\n";
-      std::cin.clear();
+      std::cin.clear(); // Reset the error flags
       std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
       std::cout << "Mesh width (columns): ";
     }
@@ -45,7 +51,10 @@ size_t getColsInput() {
 }
 
 /**
- * @brief Implementation of getMethodChoice.
+ * @brief  Implementation of getMethodChoice.
+ * @return The method choice as an unsigned integer (1 for Jacobi, 2 for
+ Gauss-Seidel).
+ * @throws Invalid Input
  */
 unsigned int getMethodChoice() {
   unsigned int choice;
@@ -66,14 +75,16 @@ unsigned int getMethodChoice() {
 }
 
 /**
- * @brief Implementation of getTolerance.
+ * @brief  Implementation of getTolerance.
+ * @return The tolerance value as a double.
+ * @throws Invalid Input
  */
 double getTolerance() {
   std::cout << "Specify the tolerance for the iterative method: ";
   while (true) {
-    double temp;
-    if (std::cin >> temp && temp > 0.0) {
-      return temp;
+    double tol;
+    if (std::cin >> tol && tol > 0.0) {
+      return tol;
     } else {
       std::cerr << "Warning: Invalid input. Please enter a positive number for "
                    "tolerance.\n";
@@ -85,8 +96,9 @@ double getTolerance() {
 }
 
 /**
- * @brief Reads and validates user input for the maximum number of iterations.
+ * @brief  Reads and validates user input for the maximum number of iterations.
  * @return The maximum number of iterations as a size_t.
+ * @throws Invalid Input
  */
 size_t getMaxIterations() {
   int maxIterations;
@@ -103,7 +115,7 @@ size_t getMaxIterations() {
 }
 
 /**
- * @brief Reads user input for the filename.
+ * @brief  Reads user input for the filename.
  * @return The filename as a std::string.
  */
 std::string getFileName() {

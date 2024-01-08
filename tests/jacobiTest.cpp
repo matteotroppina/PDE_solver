@@ -31,8 +31,6 @@ bool testJacobi() {
   for (size_t i = 0; i < rows; ++i) {
     for (size_t j = 0; j < cols; ++j) {
       if (std::fabs(myMesh.getNode(i, j) - T0) > tol) {
-        std::cout << "Test Failed: Temperature at (" << i << ", " << j
-                  << ") is incorrect." << std::endl;
         return false;
       }
     }
