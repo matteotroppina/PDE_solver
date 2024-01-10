@@ -6,9 +6,6 @@
 #include <stdexcept>
 #include <vector>
 
-/**
- * @brief Implementation of the printToCSV function.
- */
 void printToCSV(Mesh &mesh, const std::string &filename) {
   std::ofstream file(filename + ".csv");
 

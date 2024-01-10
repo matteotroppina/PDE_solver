@@ -23,8 +23,9 @@ using meshType = std::vector<std::vector<Node>>;
  */
 class Mesh {
 private:
-  std::unique_ptr<meshType> currentGrid; // pointer to a 2D vector of nodes
   size_t rows, cols;
+  meshType currentGrid; // pointer to a 2D vector of nodes
+  meshType newGrid;     // second layer for Jacobi method
 
 public:
   /**
@@ -38,21 +39,59 @@ public:
    * @throws std::runtime_error If grid allocation fails.
    */
   // constructor
+
   Mesh(const size_t rows, const size_t cols);
+
+  /**
+   * @brief Gets the temperature value at a specific node.
+   *
+   * @param x Row index of the node.
+   * @param y Column index of the node.
+   * @return The temperature value at the node.
+   */
 
   const double getNode(const size_t x, const size_t y);
 
+  /**
+   * @brief Sets the temperature value of a specified node.
+   *
+   * @param x The row index of the node.
+   * @param y The column index of the node.
+   * @param temperatureValue The temperature value to set at the node.
+   */
+
   void setNode(const size_t x, const size_t y, const double temperatureValue);
+
+  /**
+   * @brief Updates the temperature of a node to a new value.
+   *
+   * @param x The row index of the node.
+   * @param y The column index of the node.
+   * @param newTemperature The new temperature value for the node.
+   */
 
   void setNew(const size_t x, const size_t y, const double newTemperature);
 
+  /**
+   * @brief Returns the number of rows in the mesh.
+   *
+   * @return The number of rows.
+   */
+
   const size_t numRows();
 
+  /**
+   * @brief Returns the number of columns in the mesh.
+   *
+   * @return The number of columns.
+   */
   const size_t numCols();
 
-  void printMesh(const size_t rows, const size_t cols);
-
-  void updateTemperature();
+  /**
+   * @brief Swaps the two mesh layers for the Jacobi method.
+   *
+   */
+  void swapGrids();
 };
 
 #endif

@@ -16,15 +16,14 @@
  * Each node holds its temperature values.
  */
 struct Node {
-  double temperature;    ///< The current temperature at the node.
-  double newTemperature; ///< The new temperature to update after calculations.
+  double temperature; ///< The current temperature at the node.
 
   /**
    * @brief Constructor for Node.
    *
    * Initializes a Node with a default temperature of 0.0.
    */
-  Node() : temperature(0.0), newTemperature(0.0) {}
+  Node() : temperature(0.0) {}
 };
 
 #endif // NODE_H

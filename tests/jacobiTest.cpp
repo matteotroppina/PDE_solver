@@ -26,6 +26,7 @@ bool testJacobi() {
 
   // Run Gauss-Seidel solver
   jacobi(myMesh, tol, maxIterations);
+  printToCSV(myMesh, "jacobi_test");
 
   // Check if the temperature at each point in the mesh is close to T0
   for (size_t i = 0; i < rows; ++i) {
