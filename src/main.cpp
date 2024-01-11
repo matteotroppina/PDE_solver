@@ -1,10 +1,10 @@
 #include "../tests/jacobiTest.h"
-#include "functions/input/boundaries.h"
-#include "functions/input/inputHandler.h"
 #include "functions/methods/gauss_seidel.h"
 #include "functions/methods/jacobi.h"
 #include "functions/objects/Mesh.h"
 #include "functions/objects/Node.h"
+#include "functions/objects/Parameters.h"
+#include "functions/objects/boundaries.h"
 #include "functions/write_to_csv.h"
 #include <iostream>
 #include <memory>
@@ -25,39 +25,28 @@ int main(int argc, char *argv[]) {
     }
   } else {
 
-    size_t rows{0}, cols{0};
-    unsigned int methodChoice;
-    double tol{0.0};
-    size_t maxIterations{0};
-    std::string filename;
+    std::string filePath;
+    std::cout << "Provide the path to the parameters file(.txt): ";
+    std::cin >> filePath;
+    std::cout << std::endl;
 
-    // mesh initialization
-    std::cout << "** Mesh Initialization **\n";
-    rows = input::getRowsInput();
-    cols = input::getColsInput();
-    Mesh myMesh(rows, cols);
+    try {
+      Parameters parameters(filePath);
 
-    // iterative method choice
-    methodChoice = input::getMethodChoice();
+      Mesh myMesh(parameters.rows, parameters.cols);
+      Boundaries(myMesh, parameters);
 
-    // set tolerance for the chosen iterative method
-    tol = input::getTolerance();
+      if (parameters.method == 1) {
+        jacobi(myMesh, parameters.tolerance, parameters.maxIterations);
+      } else {
+        gaussSeidel(myMesh, parameters.tolerance, parameters.maxIterations);
+      }
+      // set the output filename.csv
+      printToCSV(myMesh, parameters.fileName);
 
-    // set iterations limit for the chosen iterative method
-    maxIterations = input::getMaxIterations();
-
-    setDirichletBoundaries(myMesh);
-
-    if (methodChoice == 1) {
-      jacobi(myMesh, tol, maxIterations);
-    } else {
-      gaussSeidel(myMesh, tol, maxIterations);
+    } catch (const std::exception &e) {
+      std::cerr << "Error: " << e.what() << std::endl;
     }
-
-    // set the output filename.csv
-    filename = input::getFileName();
-    printToCSV(myMesh, filename);
   }
-
   return 0;
 }

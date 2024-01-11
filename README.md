@@ -2,24 +2,18 @@
 
 ## Overview
 
-This C++ program provides a solver for the steady-state 2D heat equation with Dirichlet boundary conditions. It offers two methods for solving the equation: Jacobi and Gauss-Seidel.
-
-This project implements a solver for the 2D Poisson heat equation using C++. It leverages advanced numerical methods and efficient programming practices to provide a robust and high-performance solution for simulating heat distribution in two-dimensional spaces.
+This project implements a solver for the 2D Poisson steady-state heat equation using C++. It provides Dirichlet boundary conditions and two iterative methods for solving the equation: Jacobi and Gauss-Seidel.
 
 ## Project Structure
 
 - **src/**: Contains the main source files of the project.
   - **functions/**: Directory for function implementations relevant to the solver.
-  - **main.cpp**: The main entry point of the application.
-  - **CMakeLists.txt**: CMake configuration file for the source directory.
+  - **main.cpp**
 - **tests/**: Contains unit tests for the solver.
   - **jacobiTest.cpp**: Unit tests for the Jacobi method implementation.
-  - **jacobiTest.h**: Header file for the Jacobi method tests.
-  - **CMakeLists.txt**: CMake configuration file for the tests directory.
-- **build/**: Directory for build files (typically not checked into version control).
-- **CMakeLists.txt**: Main CMake configuration file for the entire project.
-- **.gitignore**: Git ignore file to exclude specific files and directories from version control.
-- **README.md**: (This file) Provides a comprehensive guide to the project.
+- **build/**: Directory for build files
+- **.gitignore**: Git ignore file to exclude specific files and directories.
+- **README.md**.
 
 ## Building the Project
 
@@ -46,6 +40,32 @@ After building the project, you can run the solver by executing the binary creat
    ```bash
    ./src/PDEsolver
    ```
+
+3. The program will ask you to provide the path to a file that contains the parameters to run the solver and the boundary conditions.
+   Provide the path to your file or modify and use the default one:
+
+   ```bash
+   ../default.csv
+   ```
+
+   wich follows the required syntax standard for the parameters definition:
+
+   ```bash
+   rows,50
+   columns,50
+   method,1
+   tolerance,0.05
+   maxIterations,5000
+   outputFile,default_matrix.csv
+   topBoundary,sinusoidal,5
+   bottomBoundary,constant,10
+   leftBoundary,constant,2
+   rightBoundary,sinusoidal,2
+   ```
+
+4. constant + constant value
+5. sinusoidal + amplitude
+6. testfunction
 
 ## Testing
 

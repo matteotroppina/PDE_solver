@@ -17,6 +17,8 @@ Mesh::Mesh(const size_t rows, const size_t cols)
   // Check if the grid is allocated
   if ((newGrid).empty() || (newGrid).at(0).empty()) {
     throw std::runtime_error("Second Grid allocation failed");
+  } else {
+    std::cout << "Grid is allocated\n" << std::endl;
   }
 }
 
@@ -37,4 +39,11 @@ const size_t Mesh::numRows() { return currentGrid.size(); }
 
 const size_t Mesh::numCols() { return currentGrid.at(0).size(); }
 
-void Mesh::swapGrids() { std::swap(currentGrid, newGrid); }
+void Mesh::swapGrids() {
+  for (size_t i = 1; i < numRows() - 1; ++i) {
+    for (size_t j = 1; j < numCols() - 1; ++j) {
+      std::swap(currentGrid.at(i).at(j).temperature,
+                newGrid.at(i).at(j).temperature);
+    }
+  }
+}

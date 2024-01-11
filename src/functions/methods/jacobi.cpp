@@ -48,5 +48,6 @@ void jacobi(Mesh &mesh, const double tol, const size_t maxIterations) {
   } else {
     std::cout << "Convergence reached in " << iterations << " iterations"
               << '\n';
+    std::cout << "The accuracy is: " << maxDifference << std::endl;
   }
 }

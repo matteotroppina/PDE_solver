@@ -1,5 +1,4 @@
 add_subdirectory(objects)
-add_subdirectory(input)
 add_subdirectory(methods)
 
 # Create a library "WriteToFile"

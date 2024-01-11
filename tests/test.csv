@@ -1,0 +1,10 @@
+rows,100
+columns,100
+method,1
+tolerance,0.5
+maxIterations,10000
+outputFile,jacobiTest.csv
+topBoundary,testfunction
+bottomBoundary,testfunction
+leftBoundary,testfunction
+rightBoundary,testfunction
