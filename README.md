@@ -63,10 +63,6 @@ After building the project, you can run the solver by executing the binary creat
    rightBoundary,sinusoidal,2
    ```
 
-4. constant + constant value
-5. sinusoidal + amplitude
-6. testfunction
-
 ## Testing
 
 The project includes unit tests, particularly for the Jacobi iterative method. To run the tests, navigate to the `build/` directory and execute:
