@@ -1,4 +1,11 @@
-# 2D Poisson Heat Equation Solver
+# PDE solver
+
+This C++ program provides a solver for the steady-state 2D heat equation with Dirichlet boundary conditions. It offers two methods for solving the equation: Jacobi and Gauss-Seidel.
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Building](#building)
 
 ## Overview
 
