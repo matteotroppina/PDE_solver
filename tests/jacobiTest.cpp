@@ -20,11 +20,14 @@ bool testJacobi() {
     jacobi(myMesh, parameters.tolerance, parameters.maxIterations);
     printToCSV(myMesh, parameters.fileName);
 
-    const double dx = 1.0 / (myMesh.numCols() - 1);
-    const double dy = 1.0 / (myMesh.numRows() - 1);
+    auto rows = myMesh.numRows();
+    auto cols = myMesh.numCols();
 
-    for (size_t i = 1; i < myMesh.numRows() - 1; ++i) {
-      for (size_t j = 1; j < myMesh.numCols() - 1; ++j) {
+    const double dx = 1.0 / (rows - 1);
+    const double dy = 1.0 / (cols - 1);
+
+    for (size_t i = 1; i < rows - 1; ++i) {
+      for (size_t j = 1; j < cols - 1; ++j) {
         double x = j * dx;
         double y = i * dy;
         if (std::fabs(myMesh.getNode(i, j) - (1 + x * x + 2 * y * y)) >

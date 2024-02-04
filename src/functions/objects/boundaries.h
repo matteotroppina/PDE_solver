@@ -16,6 +16,7 @@ class Boundaries {
 private:
   Mesh &_myMesh;
   Parameters &_myParameters;
+  size_t _rows, _cols;
 
   /**
    * Sets the top boundary of the mesh based on the specified boundary

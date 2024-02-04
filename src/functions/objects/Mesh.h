@@ -31,14 +31,13 @@ public:
   /**
    * @brief Construct a new Mesh object.
    *
-   * Creates a mesh with the specified number of rows and columns.
-   * Throws a runtime_error if the grid allocation fails.
-   *
    * @param rows The number of rows in the mesh.
    * @param cols The number of columns in the mesh.
    * @throws std::runtime_error If grid allocation fails.
    */
   // constructor
+
+  void checkGrid();
 
   Mesh(const size_t rows, const size_t cols);
 

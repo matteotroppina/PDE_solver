@@ -1,5 +1,5 @@
-rows,50
-columns,50
+rows,500
+columns,500
 method,1
 tolerance,0.05
 maxIterations,5000
