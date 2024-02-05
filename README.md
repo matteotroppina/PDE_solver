@@ -70,7 +70,7 @@ After building the project, you can run the solver by executing the binary creat
 
 The project includes unit tests, particularly for the Jacobi iterative method. To run the tests, navigate to the `build/` directory and execute:
 
-    ./src/PDEsolver --test7
+    ./src/PDEsolver --test
 
 ## Performance
 
