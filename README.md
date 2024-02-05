@@ -4,6 +4,7 @@
 
 This project implements a solver for the 2D Poisson steady-state heat equation using C++. It provides Dirichlet boundary conditions and two iterative methods for solving the equation: Jacobi and Gauss-Seidel.
 
+Reference:
 https://gitlab.lrz.de/tum-i05/public/advprog-project-ideas/-/blob/master/pde-solver/pde-solver.md?ref_type=heads
 
 ## Project Structure
@@ -69,4 +70,8 @@ After building the project, you can run the solver by executing the binary creat
 
 The project includes unit tests, particularly for the Jacobi iterative method. To run the tests, navigate to the `build/` directory and execute:
 
-    ./src/PDEsolver --test
+    ./src/PDEsolver --test7
+
+## Performance
+
+For detailed information on the performance analysis and optimization strategies applied to this project, please refer to the [Performance Analysis and Optimization Report](performance.md).

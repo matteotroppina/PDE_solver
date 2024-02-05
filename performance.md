@@ -45,7 +45,7 @@ To profile your application, execute:
     ./src/PDEsolver --test
     gprof ./src/PDEsolver gmon.out > analysis.txt
 
-The profiling output is available in ` analysis.txt` within the build directory.
+The profiling output is available in `analysis.txt` within the build directory.
 
 ## Optimization Strategies
 
