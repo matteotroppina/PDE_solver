@@ -1,0 +1,10 @@
+rows,500
+columns,500
+method,1
+tolerance,0.05
+maxIterations,5000
+outputFile,default_matrix.csv
+topBoundary,sinusoidal,5
+bottomBoundary,constant,10
+leftBoundary,constant,2
+rightBoundary,sinusoidal,2

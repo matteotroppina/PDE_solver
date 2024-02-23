@@ -1,3 +1,4 @@
+#include "write_to_csv.h"
 #include "objects/Mesh.h"
 #include <fstream>
 #include <iostream>
@@ -5,9 +6,6 @@
 #include <stdexcept>
 #include <vector>
 
-/**
- * @brief Implementation of the printToCSV function.
- */
 void printToCSV(Mesh &mesh, const std::string &filename) {
   std::ofstream file(filename + ".csv");
 
@@ -17,11 +15,13 @@ void printToCSV(Mesh &mesh, const std::string &filename) {
   }
 
   // Loop through the mesh and write each node's value to the CSV file
-  for (auto i = 0u; i < mesh.numRows(); ++i) {
-    for (auto j = 0u; j < mesh.numCols() - 1; ++j) {
+  auto cols = mesh.numCols();
+  auto rows = mesh.numRows();
+  for (auto i = 0u; i < rows; ++i) {
+    for (auto j = 0u; j < cols - 1; ++j) {
       file << mesh.getNode(i, j) << ", ";
     }
-    file << mesh.getNode(i, mesh.numCols() - 1) << '\n';
+    file << mesh.getNode(i, cols - 1) << '\n';
   }
 
   file.close();

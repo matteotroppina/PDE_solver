@@ -12,16 +12,21 @@ void jacobi(Mesh &mesh, const double tol, const size_t maxIterations) {
   double maxDifference{0.0};
   size_t iterations{0};
 
+  auto rows = mesh.numRows();
+  auto cols = mesh.numCols();
+
   do {
     maxDifference = 0.0; // Reset maxDifference for each iteration
-    for (auto i = 1u; i < mesh.numRows() - 1; ++i) {
-      for (auto j = 1u; j < mesh.numCols() - 1; ++j) {
+    for (auto i = 1u; i < rows - 1; ++i) {
+      for (auto j = 1u; j < cols - 1; ++j) {
+
         double newTemperature =
             (mesh.getNode(i - 1, j) + mesh.getNode(i + 1, j) +
              mesh.getNode(i, j - 1) + mesh.getNode(i, j + 1)) /
             4;
 
         double tempDifference = std::fabs(newTemperature - mesh.getNode(i, j));
+
         if (tempDifference > maxDifference) {
           maxDifference = tempDifference;
         }
@@ -30,7 +35,7 @@ void jacobi(Mesh &mesh, const double tol, const size_t maxIterations) {
       }
     }
 
-    mesh.updateTemperature();
+    mesh.swapGrids(); // swaps the two layers
     iterations++;
 
     // Check for early convergence
@@ -46,5 +51,6 @@ void jacobi(Mesh &mesh, const double tol, const size_t maxIterations) {
   } else {
     std::cout << "Convergence reached in " << iterations << " iterations"
               << '\n';
+    std::cout << "The accuracy is: " << maxDifference << std::endl;
   }
 }
